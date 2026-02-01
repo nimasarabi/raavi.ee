@@ -2,6 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+
+<!-- base-path -->
+<script>
+  (function () {
+    var path = location.pathname.split('/').filter(Boolean);
+    var base = '/';
+    if (location.hostname.endsWith('github.io') && path.length) {
+      base = '/' + path[0] + '/';
+    }
+    var baseEl = document.createElement('base');
+    baseEl.href = base;
+    document.head.appendChild(baseEl);
+  })();
+</script>
+<!-- /base-path -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Food & Product Photography - Nima Sarabi</title>
 <meta name="description" content="Event and product photographer based in Tartu, Estonia. Specializing in exhibitions, concerts, corporate events, and clean product photography for brands and small businesses.">
@@ -27,33 +42,33 @@
 <meta name="twitter:image" content="https://raavi.ee/assets/img/home/20251119_Nima+Sarabi__DSC6669.webp">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Raavi O\u00dc", "url": "https://raavi.ee", "image": "https://raavi.ee/assets/img/home/20251119_Nima+Sarabi__DSC6669.webp", "email": "nima@raavi.ee", "address": {"@type": "PostalAddress", "addressLocality": "Tartu", "addressCountry": "EE"}, "areaServed": "EE", "sameAs": ["https://www.instagram.com/nima.sarabi/", "https://www.tiktok.com/@nima.sarabi", "https://www.facebook.com/nima.sarabi"]}</script>
 <!-- /seo-meta -->
-<link rel="icon" type="image/x-icon" href="/assets/img/ui/favicon.ico">
-<link rel="stylesheet" href="/assets/css/site.css">
-<link rel="stylesheet" href="/assets/css/lightbox.css">
-<script src="/assets/js/main.js" defer></script>
-<script src="/assets/js/lang-preference.js" defer></script>
+<link rel="icon" type="image/x-icon" href="assets/img/ui/favicon.ico">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/lightbox.css">
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/lang-preference.js" defer></script>
 </head>
 <body>
 
 <header class="site-header">
   <div class="nav-bar">
     <nav class="main-nav">
-      <a href="/en/">Home</a>
-      <a href="/en/portfolio/">Portfolio</a>
-      <a href="/en/services/">Services</a>
-      <a href="/en/contact/">Contact</a>
+      <a href="en/">Home</a>
+      <a href="en/portfolio/">Portfolio</a>
+      <a href="en/services/">Services</a>
+      <a href="en/contact/">Contact</a>
     </nav>
-    <a class="site-logo" href="/en/">Raavi</a>
+    <a class="site-logo" href="en/">Raavi</a>
     <div class="nav-right">
       <div class="language-picker">
         <button class="language-picker-toggle" type="button" aria-expanded="false" aria-haspopup="listbox">
-          <img class="flag" src="/assets/img/ui/flags/gb.svg" alt="English flag icon">
+          <img class="flag" src="assets/img/ui/flags/gb.svg" alt="English flag icon">
           <span>English</span>
           <span class="language-picker-caret" aria-hidden="true"></span>
         </button>
         <div class="language-picker-menu" role="listbox">
-          <a class="language-option" href="/et/" role="option"><img class="flag" src="/assets/img/ui/flags/ee.svg" alt="Eesti flag icon"><span>Eesti</span></a>
-          <a class="language-option" href="/en/" role="option"><img class="flag" src="/assets/img/ui/flags/gb.svg" alt="English flag icon"><span>English</span></a>
+          <a class="language-option" href="et/" role="option"><img class="flag" src="assets/img/ui/flags/ee.svg" alt="Eesti flag icon"><span>Eesti</span></a>
+          <a class="language-option" href="en/" role="option"><img class="flag" src="assets/img/ui/flags/gb.svg" alt="English flag icon"><span>English</span></a>
         </div>
       </div>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu">
@@ -65,10 +80,10 @@
     </div>
   </div>
   <div class="mobile-nav">
-    <a href="/en/">Home</a>
-    <a href="/en/portfolio/">Portfolio</a>
-    <a href="/en/services/">Services</a>
-    <a href="/en/contact/">Contact</a>
+    <a href="en/">Home</a>
+    <a href="en/portfolio/">Portfolio</a>
+    <a href="en/services/">Services</a>
+    <a href="en/contact/">Contact</a>
   </div>
 </header>
 
@@ -80,21 +95,21 @@
   </section>
 
   <section class="gallery-masonry">
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/product/20230813_Nima+Sarabi_IMG_0037.webp" data-lightbox="true"><img src="/assets/img/portfolio/product/20230813_Nima+Sarabi_IMG_0037.webp" alt="View fullsize"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/product/20240309_Nima+Sarabi_DSC05229.webp" data-lightbox="true"><img src="/assets/img/portfolio/product/20240309_Nima+Sarabi_DSC05229.webp" alt="View fullsize"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/product/20241014_Nima+Sarabi__DSC0606.webp" data-lightbox="true"><img src="/assets/img/portfolio/product/20241014_Nima+Sarabi__DSC0606.webp" alt="View fullsize"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/product/20241222_Nima+Sarabi__DSC0840.webp" data-lightbox="true"><img src="/assets/img/portfolio/product/20241222_Nima+Sarabi__DSC0840.webp" alt="View fullsize"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/product/20250216_Nima+Sarabi__DSC1615.webp" data-lightbox="true"><img src="/assets/img/portfolio/product/20250216_Nima+Sarabi__DSC1615.webp" alt="View fullsize"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/product/20250216_Nima+Sarabi__DSC1620.webp" data-lightbox="true"><img src="/assets/img/portfolio/product/20250216_Nima+Sarabi__DSC1620.webp" alt="View fullsize"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/product/20250629_Nima+Sarabi__DSC3939.webp" data-lightbox="true"><img src="/assets/img/portfolio/product/20250629_Nima+Sarabi__DSC3939.webp" alt="View fullsize"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/product/20250629_Nima+Sarabi__DSC3956.webp" data-lightbox="true"><img src="/assets/img/portfolio/product/20250629_Nima+Sarabi__DSC3956.webp" alt="View fullsize"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/product/20250713_Nima+Sarabi_Lighthouse-016.webp" data-lightbox="true"><img src="/assets/img/portfolio/product/20250713_Nima+Sarabi_Lighthouse-016.webp" alt="View fullsize"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/product/20250713_Nima+Sarabi_Lighthouse-022.webp" data-lightbox="true"><img src="/assets/img/portfolio/product/20250713_Nima+Sarabi_Lighthouse-022.webp" alt="View fullsize"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/product/20250919_Nima+Sarabi__DSC6121.webp" data-lightbox="true"><img src="/assets/img/portfolio/product/20250919_Nima+Sarabi__DSC6121.webp" alt="View fullsize"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/product/20251012_Nima+Sarabi__DSC6441_Wall.webp" data-lightbox="true"><img src="/assets/img/portfolio/product/20251012_Nima+Sarabi__DSC6441_Wall.webp" alt="View fullsize"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/product/20251021_Nima+Sarabi__DSC6580.webp" data-lightbox="true"><img src="/assets/img/portfolio/product/20251021_Nima+Sarabi__DSC6580.webp" alt="View fullsize"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/product/IMG_9038-Edit.webp" data-lightbox="true"><img src="/assets/img/portfolio/product/IMG_9038-Edit.webp" alt="View fullsize"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/product/IMG_9410.webp" data-lightbox="true"><img src="/assets/img/portfolio/product/IMG_9410.webp" alt="View fullsize"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/product/20230813_Nima+Sarabi_IMG_0037.webp" data-lightbox="true"><img src="assets/img/portfolio/product/20230813_Nima+Sarabi_IMG_0037.webp" alt="View fullsize"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/product/20240309_Nima+Sarabi_DSC05229.webp" data-lightbox="true"><img src="assets/img/portfolio/product/20240309_Nima+Sarabi_DSC05229.webp" alt="View fullsize"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/product/20241014_Nima+Sarabi__DSC0606.webp" data-lightbox="true"><img src="assets/img/portfolio/product/20241014_Nima+Sarabi__DSC0606.webp" alt="View fullsize"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/product/20241222_Nima+Sarabi__DSC0840.webp" data-lightbox="true"><img src="assets/img/portfolio/product/20241222_Nima+Sarabi__DSC0840.webp" alt="View fullsize"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/product/20250216_Nima+Sarabi__DSC1615.webp" data-lightbox="true"><img src="assets/img/portfolio/product/20250216_Nima+Sarabi__DSC1615.webp" alt="View fullsize"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/product/20250216_Nima+Sarabi__DSC1620.webp" data-lightbox="true"><img src="assets/img/portfolio/product/20250216_Nima+Sarabi__DSC1620.webp" alt="View fullsize"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/product/20250629_Nima+Sarabi__DSC3939.webp" data-lightbox="true"><img src="assets/img/portfolio/product/20250629_Nima+Sarabi__DSC3939.webp" alt="View fullsize"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/product/20250629_Nima+Sarabi__DSC3956.webp" data-lightbox="true"><img src="assets/img/portfolio/product/20250629_Nima+Sarabi__DSC3956.webp" alt="View fullsize"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/product/20250713_Nima+Sarabi_Lighthouse-016.webp" data-lightbox="true"><img src="assets/img/portfolio/product/20250713_Nima+Sarabi_Lighthouse-016.webp" alt="View fullsize"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/product/20250713_Nima+Sarabi_Lighthouse-022.webp" data-lightbox="true"><img src="assets/img/portfolio/product/20250713_Nima+Sarabi_Lighthouse-022.webp" alt="View fullsize"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/product/20250919_Nima+Sarabi__DSC6121.webp" data-lightbox="true"><img src="assets/img/portfolio/product/20250919_Nima+Sarabi__DSC6121.webp" alt="View fullsize"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/product/20251012_Nima+Sarabi__DSC6441_Wall.webp" data-lightbox="true"><img src="assets/img/portfolio/product/20251012_Nima+Sarabi__DSC6441_Wall.webp" alt="View fullsize"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/product/20251021_Nima+Sarabi__DSC6580.webp" data-lightbox="true"><img src="assets/img/portfolio/product/20251021_Nima+Sarabi__DSC6580.webp" alt="View fullsize"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/product/IMG_9038-Edit.webp" data-lightbox="true"><img src="assets/img/portfolio/product/IMG_9038-Edit.webp" alt="View fullsize"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/product/IMG_9410.webp" data-lightbox="true"><img src="assets/img/portfolio/product/IMG_9410.webp" alt="View fullsize"></a>
   </section>
 </main>
 
@@ -124,6 +139,6 @@
   </div>
 </footer>
 
-<script src="/assets/js/lightbox.js" defer></script>
+<script src="assets/js/lightbox.js" defer></script>
 </body>
 </html>

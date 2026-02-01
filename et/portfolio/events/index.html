@@ -2,6 +2,21 @@
 <html lang="et">
 <head>
 <meta charset="utf-8">
+
+<!-- base-path -->
+<script>
+  (function () {
+    var path = location.pathname.split('/').filter(Boolean);
+    var base = '/';
+    if (location.hostname.endsWith('github.io') && path.length) {
+      base = '/' + path[0] + '/';
+    }
+    var baseEl = document.createElement('base');
+    baseEl.href = base;
+    document.head.appendChild(baseEl);
+  })();
+</script>
+<!-- /base-path -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ürituste fotograafia - Nima Sarabi</title>
 <meta name="description" content="Tartus, Eestis tegutsev ürituste- ja tootefotograaf. Spetsialiseerunud näitustele, kontsertidele, korporatiivüritustele ning puhtale tootefotograafiale brändidele ja väikeettevõtetele.">
@@ -27,33 +42,33 @@
 <meta name="twitter:image" content="https://raavi.ee/assets/img/home/20251119_Nima+Sarabi__DSC6669.webp">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Raavi O\u00dc", "url": "https://raavi.ee", "image": "https://raavi.ee/assets/img/home/20251119_Nima+Sarabi__DSC6669.webp", "email": "nima@raavi.ee", "address": {"@type": "PostalAddress", "addressLocality": "Tartu", "addressCountry": "EE"}, "areaServed": "EE", "sameAs": ["https://www.instagram.com/nima.sarabi/", "https://www.tiktok.com/@nima.sarabi", "https://www.facebook.com/nima.sarabi"]}</script>
 <!-- /seo-meta -->
-<link rel="icon" type="image/x-icon" href="/assets/img/ui/favicon.ico">
-<link rel="stylesheet" href="/assets/css/site.css">
-<link rel="stylesheet" href="/assets/css/lightbox.css">
-<script src="/assets/js/main.js" defer></script>
-<script src="/assets/js/lang-preference.js" defer></script>
+<link rel="icon" type="image/x-icon" href="assets/img/ui/favicon.ico">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/lightbox.css">
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/lang-preference.js" defer></script>
 </head>
 <body>
 
 <header class="site-header">
   <div class="nav-bar">
     <nav class="main-nav">
-      <a href="/et/">Avaleht</a>
-      <a href="/et/portfolio/">Portfoolio</a>
-      <a href="/et/services/">Teenused</a>
-      <a href="/et/contact/">Kontakt</a>
+      <a href="et/">Avaleht</a>
+      <a href="et/portfolio/">Portfoolio</a>
+      <a href="et/services/">Teenused</a>
+      <a href="et/contact/">Kontakt</a>
     </nav>
-    <a class="site-logo" href="/et/">Raavi</a>
+    <a class="site-logo" href="et/">Raavi</a>
     <div class="nav-right">
       <div class="language-picker">
         <button class="language-picker-toggle" type="button" aria-expanded="false" aria-haspopup="listbox">
-          <img class="flag" src="/assets/img/ui/flags/ee.svg" alt="Eesti flag icon">
+          <img class="flag" src="assets/img/ui/flags/ee.svg" alt="Eesti flag icon">
           <span>Eesti</span>
           <span class="language-picker-caret" aria-hidden="true"></span>
         </button>
         <div class="language-picker-menu" role="listbox">
-          <a class="language-option" href="/et/" role="option"><img class="flag" src="/assets/img/ui/flags/ee.svg" alt="Eesti flag icon"><span>Eesti</span></a>
-          <a class="language-option" href="/en/" role="option"><img class="flag" src="/assets/img/ui/flags/gb.svg" alt="English flag icon"><span>English</span></a>
+          <a class="language-option" href="et/" role="option"><img class="flag" src="assets/img/ui/flags/ee.svg" alt="Eesti flag icon"><span>Eesti</span></a>
+          <a class="language-option" href="en/" role="option"><img class="flag" src="assets/img/ui/flags/gb.svg" alt="English flag icon"><span>English</span></a>
         </div>
       </div>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu">
@@ -65,10 +80,10 @@
     </div>
   </div>
   <div class="mobile-nav">
-    <a href="/et/">Avaleht</a>
-    <a href="/et/portfolio/">Portfoolio</a>
-    <a href="/et/services/">Teenused</a>
-    <a href="/et/contact/">Kontakt</a>
+    <a href="et/">Avaleht</a>
+    <a href="et/portfolio/">Portfoolio</a>
+    <a href="et/services/">Teenused</a>
+    <a href="et/contact/">Kontakt</a>
   </div>
 </header>
 
@@ -80,35 +95,35 @@
   </section>
 
   <section class="gallery-masonry">
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20210629_Nima+Sarabi_IMG_2057.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20210629_Nima+Sarabi_IMG_2057.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20210629_Nima+Sarabi_IMG_2134_007.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20210629_Nima+Sarabi_IMG_2134_007.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20210724_Nima+Sarabi_IMG_2670.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20210724_Nima+Sarabi_IMG_2670.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20210724_Nima+Sarabi_IMG_2706.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20210724_Nima+Sarabi_IMG_2706.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20210724_Nima+Sarabi_IMG_2710.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20210724_Nima+Sarabi_IMG_2710.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20210731_Nima+Sarabi_IMG_2924.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20210731_Nima+Sarabi_IMG_2924.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20210731_Nima+Sarabi_IMG_2934.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20210731_Nima+Sarabi_IMG_2934.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20210807_Nima+Sarabi_IMG_3291.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20210807_Nima+Sarabi_IMG_3291.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20210807_Nima+Sarabi_IMG_3346.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20210807_Nima+Sarabi_IMG_3346.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20210807_Nima+Sarabi_IMG_3352.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20210807_Nima+Sarabi_IMG_3352.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20211002_Nima+Sarabi_IMG_3971.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20211002_Nima+Sarabi_IMG_3971.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20220216_Nima+Sarabi_IMG_5051.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20220216_Nima+Sarabi_IMG_5051.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5563.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5563.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5788.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5788.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5808.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5808.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5924.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5924.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20220814_Nima+Sarabi_IMG_6922.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20220814_Nima+Sarabi_IMG_6922.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20220814_Nima+Sarabi_IMG_6971.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20220814_Nima+Sarabi_IMG_6971.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20220814_Nima+Sarabi_IMG_6990.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20220814_Nima+Sarabi_IMG_6990.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20220827_Nima+Sarabi_IMG_7230.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20220827_Nima+Sarabi_IMG_7230.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20230617_Nima+Sarabi_IMG_2939.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20230617_Nima+Sarabi_IMG_2939.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20230617_Nima+Sarabi_IMG_3611.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20230617_Nima+Sarabi_IMG_3611.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20240126_Nima+Sarabi_DSC04697-2.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20240126_Nima+Sarabi_DSC04697-2.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20240707_Nima+Sarabi__DSC7540.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20240707_Nima+Sarabi__DSC7540.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20240707_Nima+Sarabi__DSC7596.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20240707_Nima+Sarabi__DSC7596.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20240712_Nima+Sarabi__DSC7772.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20240712_Nima+Sarabi__DSC7772.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20240712_Nima+Sarabi__DSC7922.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20240712_Nima+Sarabi__DSC7922.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20240712_Nima+Sarabi__DSC8016.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20240712_Nima+Sarabi__DSC8016.webp" alt="Vaata täissuuruses"></a>
-    <a class="gallery-masonry-lightbox-link" href="/assets/img/portfolio/events/20240712_Nima+Sarabi__DSC8104.webp" data-lightbox="true"><img src="/assets/img/portfolio/events/20240712_Nima+Sarabi__DSC8104.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20210629_Nima+Sarabi_IMG_2057.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20210629_Nima+Sarabi_IMG_2057.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20210629_Nima+Sarabi_IMG_2134_007.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20210629_Nima+Sarabi_IMG_2134_007.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20210724_Nima+Sarabi_IMG_2670.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20210724_Nima+Sarabi_IMG_2670.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20210724_Nima+Sarabi_IMG_2706.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20210724_Nima+Sarabi_IMG_2706.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20210724_Nima+Sarabi_IMG_2710.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20210724_Nima+Sarabi_IMG_2710.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20210731_Nima+Sarabi_IMG_2924.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20210731_Nima+Sarabi_IMG_2924.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20210731_Nima+Sarabi_IMG_2934.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20210731_Nima+Sarabi_IMG_2934.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20210807_Nima+Sarabi_IMG_3291.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20210807_Nima+Sarabi_IMG_3291.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20210807_Nima+Sarabi_IMG_3346.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20210807_Nima+Sarabi_IMG_3346.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20210807_Nima+Sarabi_IMG_3352.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20210807_Nima+Sarabi_IMG_3352.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20211002_Nima+Sarabi_IMG_3971.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20211002_Nima+Sarabi_IMG_3971.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20220216_Nima+Sarabi_IMG_5051.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20220216_Nima+Sarabi_IMG_5051.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5563.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5563.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5788.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5788.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5808.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5808.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5924.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20220701_Nima+Sarabi_IMG_5924.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20220814_Nima+Sarabi_IMG_6922.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20220814_Nima+Sarabi_IMG_6922.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20220814_Nima+Sarabi_IMG_6971.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20220814_Nima+Sarabi_IMG_6971.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20220814_Nima+Sarabi_IMG_6990.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20220814_Nima+Sarabi_IMG_6990.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20220827_Nima+Sarabi_IMG_7230.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20220827_Nima+Sarabi_IMG_7230.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20230617_Nima+Sarabi_IMG_2939.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20230617_Nima+Sarabi_IMG_2939.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20230617_Nima+Sarabi_IMG_3611.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20230617_Nima+Sarabi_IMG_3611.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20240126_Nima+Sarabi_DSC04697-2.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20240126_Nima+Sarabi_DSC04697-2.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20240707_Nima+Sarabi__DSC7540.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20240707_Nima+Sarabi__DSC7540.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20240707_Nima+Sarabi__DSC7596.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20240707_Nima+Sarabi__DSC7596.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20240712_Nima+Sarabi__DSC7772.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20240712_Nima+Sarabi__DSC7772.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20240712_Nima+Sarabi__DSC7922.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20240712_Nima+Sarabi__DSC7922.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20240712_Nima+Sarabi__DSC8016.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20240712_Nima+Sarabi__DSC8016.webp" alt="Vaata täissuuruses"></a>
+    <a class="gallery-masonry-lightbox-link" href="assets/img/portfolio/events/20240712_Nima+Sarabi__DSC8104.webp" data-lightbox="true"><img src="assets/img/portfolio/events/20240712_Nima+Sarabi__DSC8104.webp" alt="Vaata täissuuruses"></a>
   </section>
 </main>
 
@@ -138,6 +153,6 @@
   </div>
 </footer>
 
-<script src="/assets/js/lightbox.js" defer></script>
+<script src="assets/js/lightbox.js" defer></script>
 </body>
 </html>

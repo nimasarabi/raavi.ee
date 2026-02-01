@@ -32,6 +32,12 @@
     return stripped === '' ? '/' : stripped;
   };
 
+  const toRelative = (pathname) => {
+    if (!pathname || pathname === '/') return './';
+    if (pathname.startsWith('/')) return pathname.slice(1);
+    return pathname;
+  };
+
   const mapToEt = (pathname) => {
     if (pathname === '/' || pathname === '') return '/et/';
     if (pathname.startsWith('/et/')) return pathname;
@@ -59,6 +65,15 @@
     return '/et' + (base.startsWith('/') ? base : '/' + base);
   };
 
+  const applyBase = (pathname) => {
+    const host = window.location.hostname;
+    const parts = window.location.pathname.split('/').filter(Boolean);
+    const basePrefix = host.endsWith('github.io') && parts.length ? '/' + parts[0] : '';
+    if (!basePrefix) return pathname;
+    if (pathname === '/') return basePrefix + '/';
+    return basePrefix + (pathname.startsWith('/') ? pathname : '/' + pathname);
+  };
+
   const getBasePath = (pathname) => {
     if (pathname === '/en' || pathname.startsWith('/en/')) return stripPrefix(pathname, '/en');
     if (pathname === '/et' || pathname.startsWith('/et/')) return stripPrefix(pathname, '/et');
@@ -73,8 +88,8 @@
     const options = document.querySelectorAll('.language-option');
     options.forEach((link) => {
       const label = (link.textContent || '').toLowerCase();
-      if (label.includes('eesti')) link.setAttribute('href', etHref);
-      if (label.includes('english') || label.includes('inglise')) link.setAttribute('href', enHref || '/');
+      if (label.includes('eesti')) link.setAttribute('href', toRelative(etHref));
+      if (label.includes('english') || label.includes('inglise')) link.setAttribute('href', toRelative(enHref || '/'));
     });
   };
 
@@ -83,7 +98,7 @@
   if (preferred === 'et' && !isEtPath) {
     const target = mapToEt(path);
     if (target && target !== path) {
-      window.location.replace(target);
+      window.location.replace(applyBase(target));
       return;
     }
   }
@@ -91,7 +106,7 @@
   if (preferred === 'en' && isEtPath) {
     const target = stripPrefix(path, '/et');
     if (target !== path) {
-      window.location.replace(target);
+      window.location.replace(applyBase(target));
       return;
     }
   }
@@ -120,7 +135,8 @@
       const mapped = mapToEt(url.pathname);
       if (mapped && mapped !== url.pathname) {
         url.pathname = mapped;
-        link.setAttribute('href', url.pathname + url.search + url.hash);
+        const rel = toRelative(url.pathname);
+        link.setAttribute('href', rel + url.search + url.hash);
       }
     });
   };

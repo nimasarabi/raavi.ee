@@ -2,6 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+
+<!-- base-path -->
+<script>
+  (function () {
+    var path = location.pathname.split('/').filter(Boolean);
+    var base = '/';
+    if (location.hostname.endsWith('github.io') && path.length) {
+      base = '/' + path[0] + '/';
+    }
+    var baseEl = document.createElement('base');
+    baseEl.href = base;
+    document.head.appendChild(baseEl);
+  })();
+</script>
+<!-- /base-path -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nima Sarabi – Photographer in Tartu, Estonia</title>
 <meta name="description" content="Event and product photographer based in Tartu, Estonia. Specializing in exhibitions, concerts, corporate events, and clean product photography for brands and small businesses.">
@@ -27,32 +42,32 @@
 <meta name="twitter:image" content="https://raavi.ee/assets/img/home/20251119_Nima+Sarabi__DSC6669.webp">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Raavi O\u00dc", "url": "https://raavi.ee", "image": "https://raavi.ee/assets/img/home/20251119_Nima+Sarabi__DSC6669.webp", "email": "nima@raavi.ee", "address": {"@type": "PostalAddress", "addressLocality": "Tartu", "addressCountry": "EE"}, "areaServed": "EE", "sameAs": ["https://www.instagram.com/nima.sarabi/", "https://www.tiktok.com/@nima.sarabi", "https://www.facebook.com/nima.sarabi"]}</script>
 <!-- /seo-meta -->
-<link rel="icon" type="image/x-icon" href="/assets/img/ui/favicon.ico">
-<link rel="stylesheet" href="/assets/css/site.css">
-<script src="/assets/js/main.js" defer></script>
-<script src="/assets/js/lang-preference.js" defer></script>
+<link rel="icon" type="image/x-icon" href="assets/img/ui/favicon.ico">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/lang-preference.js" defer></script>
 </head>
 <body class="has-hero hero-dark">
 
 <header class="site-header">
   <div class="nav-bar">
     <nav class="main-nav">
-      <a href="/">Home</a>
-      <a href="/portfolio/">Portfolio</a>
-      <a href="/services/">Services</a>
-      <a href="/contact/">Contact</a>
+      <a href="./">Home</a>
+      <a href="portfolio/">Portfolio</a>
+      <a href="services/">Services</a>
+      <a href="contact/">Contact</a>
     </nav>
-    <a class="site-logo" href="/">Raavi</a>
+    <a class="site-logo" href="./">Raavi</a>
     <div class="nav-right">
       <div class="language-picker">
         <button class="language-picker-toggle" type="button" aria-expanded="false" aria-haspopup="listbox">
-          <img class="flag" src="/assets/img/ui/flags/gb.svg" alt="English flag icon">
+          <img class="flag" src="assets/img/ui/flags/gb.svg" alt="English flag icon">
           <span>English</span>
           <span class="language-picker-caret" aria-hidden="true"></span>
         </button>
         <div class="language-picker-menu" role="listbox">
-          <a class="language-option" href="/et/" role="option"><img class="flag" src="/assets/img/ui/flags/ee.svg" alt="Eesti flag icon"><span>Eesti</span></a>
-          <a class="language-option" href="/" role="option"><img class="flag" src="/assets/img/ui/flags/gb.svg" alt="English flag icon"><span>English</span></a>
+          <a class="language-option" href="et/" role="option"><img class="flag" src="assets/img/ui/flags/ee.svg" alt="Eesti flag icon"><span>Eesti</span></a>
+          <a class="language-option" href="./" role="option"><img class="flag" src="assets/img/ui/flags/gb.svg" alt="English flag icon"><span>English</span></a>
         </div>
       </div>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu">
@@ -64,24 +79,24 @@
     </div>
   </div>
   <div class="mobile-nav">
-    <a href="/">Home</a>
-    <a href="/portfolio/">Portfolio</a>
-    <a href="/services/">Services</a>
-    <a href="/contact/">Contact</a>
+    <a href="./">Home</a>
+    <a href="portfolio/">Portfolio</a>
+    <a href="services/">Services</a>
+    <a href="contact/">Contact</a>
   </div>
 </header>
 
 <main>
-  <section class="hero hero--mono" style="background-image:url('/assets/img/portfolio/events/20210629_Nima+Sarabi_IMG_2134_007.webp'); background-position: 53% 0%">
+  <section class="hero hero--mono" style="background-image:url('assets/img/portfolio/events/20210629_Nima+Sarabi_IMG_2134_007.webp'); background-position: 53% 0%">
     <div class="hero-content">
       <h3>Simple, clear, and attentive photography from Tartu to the rest of Estonia.</h3>
-      <a class="button" href="/portfolio/">Portfolio</a>
+      <a class="button" href="portfolio/">Portfolio</a>
     </div>
   </section>
 
   <section class="section section-divider section-accent">
     <div class="container about-grid">
-      <div class="about-photo"><img src="/assets/img/home/20251119_Nima+Sarabi__DSC6669.webp" alt="Portrait"></div>
+      <div class="about-photo"><img src="assets/img/home/20251119_Nima+Sarabi__DSC6669.webp" alt="Portrait"></div>
       <div class="about-text">
         <p>I’m Nima Sarabi, a photographer based in Tartu and working across Estonia. I focus on event, product, and food photography, delivering clear, direct images that help clients show their work at its best.</p>
         <p>My approach is straightforward. I work quietly, stay focused, and pay attention to the details that matter.</p>
