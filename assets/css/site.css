@@ -289,14 +289,17 @@ body.has-hero main {
 
 .menu-toggle {
   display: none;
-  border: none;
-  background: transparent;
+  border: 1px solid var(--line);
+  background: hsla(var(--white-hsl), 0.85);
   padding: 0;
   width: 35px;
   height: 35px;
+  border-radius: 999px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  color: hsl(var(--black-hsl));
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .menu-toggle-box {
@@ -328,6 +331,7 @@ body.has-hero main {
   border-top: 1px solid var(--line);
   background: hsl(var(--surface-hsl));
   box-shadow: var(--shadow-soft);
+  color: hsl(var(--black-hsl));
 }
 
 .mobile-nav a {
@@ -362,6 +366,18 @@ body.has-hero .language-picker-toggle:hover,
 body.has-hero .language-picker-toggle:focus-visible {
   background: hsla(var(--black-hsl), 0.45);
   border-color: hsla(var(--white-hsl), 0.35);
+}
+
+body.has-hero .menu-toggle {
+  background: hsla(var(--black-hsl), 0.45);
+  border-color: hsla(var(--white-hsl), 0.35);
+  color: hsl(var(--white-hsl));
+}
+
+body.has-hero .menu-toggle:hover,
+body.has-hero .menu-toggle:focus-visible {
+  background: hsla(var(--black-hsl), 0.65);
+  border-color: hsla(var(--white-hsl), 0.55);
 }
 
 body.has-hero .main-nav a::after {
