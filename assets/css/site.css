@@ -524,6 +524,10 @@ body.has-hero .main-nav a::after {
   margin: 0;
 }
 
+.portfolio-detail .page-title h3 {
+  color: hsla(var(--darkAccent-hsl), 0.7);
+}
+
 .portfolio-tiles {
   padding: clamp(70px, 10vw, 120px) var(--page-padding) var(--section-space);
 }
@@ -565,8 +569,9 @@ body.has-hero .main-nav a::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, hsla(var(--white-hsl), 0) 0%, hsla(var(--white-hsl), 0.65) 100%);
+  background: linear-gradient(180deg, hsla(var(--black-hsl), 0.05) 0%, hsla(var(--black-hsl), 0.55) 100%);
   transition: background 0.3s ease;
+  z-index: 1;
 }
 
 .portfolio-tile:hover img {
@@ -574,7 +579,7 @@ body.has-hero .main-nav a::after {
 }
 
 .portfolio-tile:hover::after {
-  background: linear-gradient(180deg, hsla(var(--white-hsl), 0.15) 0%, hsla(var(--white-hsl), 0.75) 100%);
+  background: linear-gradient(180deg, hsla(var(--black-hsl), 0.2) 0%, hsla(var(--black-hsl), 0.7) 100%);
 }
 
 .portfolio-tile .tile-text {
@@ -586,11 +591,13 @@ body.has-hero .main-nav a::after {
   font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(1.6rem, 3vw, 2.2rem);
-  color: hsl(var(--black-hsl));
+  color: hsl(var(--white-hsl));
   opacity: 0;
   transition: opacity 0.3s ease;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-shadow: 0 6px 18px hsla(var(--black-hsl), 0.45);
+  z-index: 2;
 }
 
 .portfolio-tile:hover .tile-text {
