@@ -17,7 +17,30 @@
     }
   };
 
-  const path = window.location.pathname || '/';
+  const rawPath = window.location.pathname || '/';
+  const host = window.location.hostname;
+  const parts = rawPath.split('/').filter(Boolean);
+  const basePrefix = host.endsWith('github.io') && parts.length ? '/' + parts[0] : '';
+  const repoSegment = basePrefix ? basePrefix.slice(1) : '';
+  const normalizePath = (value) => {
+    let normalized = value || '/';
+    if (!normalized.startsWith('/')) normalized = '/' + normalized;
+    if (repoSegment) {
+      if (normalized === '/' + repoSegment) normalized = '/';
+      if (normalized.startsWith('/' + repoSegment + '/')) {
+        normalized = normalized.slice(repoSegment.length + 1);
+      }
+      const re = new RegExp('^/(et|en)/' + repoSegment + '(?=/)');
+      normalized = normalized.replace(re, '/$1');
+    }
+    const duplicateLang = /^\/(et|en)\/\1(?=\/)/;
+    while (duplicateLang.test(normalized)) {
+      normalized = normalized.replace(duplicateLang, '/$1');
+    }
+    return normalized || '/';
+  };
+  const strippedPath = rawPath.startsWith(basePrefix) ? (rawPath.slice(basePrefix.length) || '/') : rawPath;
+  const path = normalizePath(strippedPath);
   const isEtPath = path === '/et' || path.startsWith('/et/');
   const isEnPath = path === '/en' || path.startsWith('/en/');
 
@@ -66,13 +89,15 @@
   };
 
   const applyBase = (pathname) => {
-    const host = window.location.hostname;
-    const parts = window.location.pathname.split('/').filter(Boolean);
-    const basePrefix = host.endsWith('github.io') && parts.length ? '/' + parts[0] : '';
     if (!basePrefix) return pathname;
     if (pathname === '/') return basePrefix + '/';
     return basePrefix + (pathname.startsWith('/') ? pathname : '/' + pathname);
   };
+
+  if (path !== strippedPath) {
+    window.location.replace(applyBase(path));
+    return;
+  }
 
   const getBasePath = (pathname) => {
     if (pathname === '/en' || pathname.startsWith('/en/')) return stripPrefix(pathname, '/en');
@@ -132,10 +157,12 @@
     links.forEach((link) => {
       if (!shouldRewrite(link)) return;
       const url = new URL(link.getAttribute('href'), window.location.href);
-      const mapped = mapToEt(url.pathname);
-      if (mapped && mapped !== url.pathname) {
-        url.pathname = mapped;
-        const rel = toRelative(url.pathname);
+      const normalized = normalizePath(url.pathname.startsWith(basePrefix)
+        ? (url.pathname.slice(basePrefix.length) || '/')
+        : url.pathname);
+      const mapped = mapToEt(normalized);
+      if (mapped && mapped !== normalized) {
+        const rel = toRelative(mapped);
         link.setAttribute('href', rel + url.search + url.hash);
       }
     });
@@ -166,7 +193,10 @@
     }
     if (url.origin !== window.location.origin) return;
 
-    if (url.pathname === '/et' || url.pathname.startsWith('/et/')) safeSet('et');
-    if (url.pathname === '/en' || url.pathname.startsWith('/en/')) safeSet('en');
+    const normalized = normalizePath(url.pathname.startsWith(basePrefix)
+      ? (url.pathname.slice(basePrefix.length) || '/')
+      : url.pathname);
+    if (normalized === '/et' || normalized.startsWith('/et/')) safeSet('et');
+    if (normalized === '/en' || normalized.startsWith('/en/')) safeSet('en');
   });
 })();
