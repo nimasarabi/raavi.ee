@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://raavi.ee/sitemap.xml
+Sitemap: https://www.raavi.ee/sitemap.xml
