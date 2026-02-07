@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /*?itemId=
+Disallow: /cart
+Disallow: /et/cart
 
 Sitemap: https://www.raavi.ee/sitemap.xml
