@@ -75,7 +75,7 @@
       ['/portfolio', '/et/portfolio'],
       ['/services', '/et/services'],
       ['/contact', '/et/contact'],
-      ['/faqs', '/et/faqs'],
+      ['/faqs', '/et/services'],
       ['/404', '/et/404'],
     ];
 
