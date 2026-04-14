@@ -42,16 +42,36 @@
 <meta name="twitter:image" content="https://www.raavi.ee/assets/img/home/20251119_Nima+Sarabi__DSC6669.webp">
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@type": "LocalBusiness",
- "name": "Raavi Photography",
- "url": "https://www.raavi.ee",
- "areaServed": "Estonia",
- "address": {
-   "@type": "PostalAddress",
-   "addressLocality": "Tartu",
-   "addressCountry": "EE"
- }
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://www.raavi.ee/#business",
+      "name": "Raavi Photography",
+      "url": "https://www.raavi.ee",
+      "email": "nima@raavi.ee",
+      "areaServed": { "@type": "Country", "name": "Estonia" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tartu",
+        "addressCountry": "EE"
+      },
+      "sameAs": [
+        "https://www.instagram.com/nima.sarabi/",
+        "https://www.tiktok.com/@nima.sarabi",
+        "https://www.facebook.com/nima.sarabi"
+      ],
+      "priceRange": "€€"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.raavi.ee/#person",
+      "name": "Nima Sarabi",
+      "jobTitle": "Photographer",
+      "url": "https://www.raavi.ee",
+      "worksFor": { "@id": "https://www.raavi.ee/#business" }
+    }
+  ]
 }
 </script>
 <!-- /seo-meta -->
@@ -100,7 +120,7 @@
 </header>
 
 <main>
-  <section class="hero hero--mono" style="background-image:url('assets/img/portfolio/events/20210629_Nima+Sarabi_IMG_2134_007.webp'); background-position: 53% 0%">
+  <section class="hero hero--mono" style="background-image:url('assets/img/portfolio/events/20210629_Nima+Sarabi_IMG_2134_007.webp'); background-position: 53% 0%; filter: grayscale(1)">
     <div class="hero-content">
       <h3>Lihtne, selge ja tähelepanelik fotograafia Tartust üle kogu Eesti.</h3>
       <a class="button" href="/et/portfolio/">Portfoolio</a>

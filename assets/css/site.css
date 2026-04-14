@@ -1,23 +1,23 @@
 @import url("fonts.css");
 
 :root {
-  --white-hsl: 210, 38%, 96%;
-  --black-hsl: 220, 22%, 12%;
-  --accent-hsl: 210, 32%, 32%;
-  --lightAccent-hsl: 210, 30%, 90%;
-  --darkAccent-hsl: 215, 26%, 18%;
-  --surface-hsl: 210, 30%, 98%;
+  --white-hsl: 0, 0%, 98%;
+  --black-hsl: 0, 0%, 8%;
+  --accent-hsl: 0, 0%, 40%;
+  --lightAccent-hsl: 0, 0%, 92%;
+  --darkAccent-hsl: 0, 0%, 22%;
+  --surface-hsl: 0, 0%, 99%;
   --page-padding: clamp(18px, 4vw, 80px);
   --max-width: 1600px;
   --header-pad: clamp(14px, 2.2vw, 28px);
   --header-pad-mobile: clamp(18px, 7vw, 32px);
-  --section-space: clamp(44px, 7vw, 120px);
-  --line: hsla(var(--black-hsl), 0.12);
-  --line-strong: hsla(var(--black-hsl), 0.22);
-  --shadow-soft: 0 28px 70px hsla(var(--black-hsl), 0.1);
-  --radius-xs: 8px;
-  --radius-sm: 12px;
-  --radius-md: 20px;
+  --section-space: clamp(60px, 10vw, 160px);
+  --line: hsla(var(--black-hsl), 0.1);
+  --line-strong: hsla(var(--black-hsl), 0.2);
+  --shadow-soft: 0 4px 20px hsla(var(--black-hsl), 0.06);
+  --radius-xs: 3px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
   --radius-pill: 999px;
   --footer-height: clamp(72px, 9vw, 96px);
   --font-body: "Urbanist", "Poppins", sans-serif;
@@ -37,7 +37,7 @@ body {
   margin: 0;
   font-family: var(--font-body);
   color: hsl(var(--black-hsl));
-  background: linear-gradient(180deg, hsla(var(--white-hsl), 1) 0%, hsla(var(--lightAccent-hsl), 0.35) 100%);
+  background: hsl(var(--white-hsl));
   line-height: 1.65;
   letter-spacing: 0.01em;
   min-height: 100vh;
@@ -45,37 +45,6 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-}
-
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  inset: auto;
-  width: 52vmax;
-  height: 52vmax;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(40px);
-  opacity: 0.45;
-}
-
-body::before {
-  top: -18vmax;
-  left: -16vmax;
-  background: radial-gradient(circle, hsla(var(--lightAccent-hsl), 0.8) 0%, hsla(var(--lightAccent-hsl), 0) 60%);
-}
-
-body::after {
-  right: -20vmax;
-  bottom: -24vmax;
-  background: radial-gradient(circle, hsla(var(--accent-hsl), 0.35) 0%, hsla(var(--accent-hsl), 0) 65%);
-}
-
-body > * {
-  position: relative;
-  z-index: 1;
 }
 
 h1,
@@ -89,7 +58,7 @@ h4 {
 }
 
 body.portfolio-index {
-  background: linear-gradient(180deg, hsla(var(--white-hsl), 1) 0%, hsla(var(--lightAccent-hsl), 0.35) 100%);
+  background: hsl(var(--white-hsl));
 }
 
 img {
@@ -176,7 +145,7 @@ body.has-hero main {
   display: flex;
   gap: 2vw;
   font-size: 0.82rem;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -350,8 +319,8 @@ body.has-hero main {
 }
 
 body:not(.has-hero) .nav-bar {
-  background: hsla(var(--white-hsl), 0.92);
-  backdrop-filter: blur(12px);
+  background: hsl(var(--white-hsl));
+  backdrop-filter: none;
   border-bottom: 1px solid var(--line);
 }
 
@@ -410,7 +379,7 @@ body.has-hero .main-nav a::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, hsla(var(--black-hsl), 0.15) 0%, hsla(var(--black-hsl), 0.55) 100%);
+  background: linear-gradient(180deg, hsla(var(--black-hsl), 0.08) 0%, hsla(var(--black-hsl), 0.45) 100%);
   z-index: 0;
 }
 
@@ -472,7 +441,7 @@ body.has-hero .main-nav a::after {
 
 .section-accent {
   position: relative;
-  background: linear-gradient(135deg, hsla(var(--lightAccent-hsl), 0.75) 0%, hsla(var(--white-hsl), 0.95) 100%);
+  background: hsl(var(--lightAccent-hsl));
   color: hsl(var(--black-hsl));
   padding-bottom: calc(var(--section-space) + 2vw);
   border-top: 1px solid var(--line);
@@ -1145,7 +1114,7 @@ form textarea:focus {
 
 .footer {
   border-top: 1px solid var(--line);
-  background: hsla(var(--white-hsl), 0.7);
+  background: hsl(var(--white-hsl));
   color: hsl(var(--darkAccent-hsl));
   font-size: 0.85rem;
   position: relative;
@@ -1153,7 +1122,6 @@ form textarea:focus {
   display: flex;
   align-items: center;
   margin-top: auto;
-  backdrop-filter: blur(12px);
 }
 
 .footer-inner {
@@ -1255,11 +1223,17 @@ form textarea:focus {
   }
 
   .about-grid {
-    grid-template-columns: 1fr;
+    display: flow-root;
   }
 
   .about-photo {
-    max-width: 100%;
+    float: left;
+    max-width: 130px;
+    margin: 0 16px 12px 0;
+  }
+
+  .about-text p {
+    font-size: 0.92rem;
   }
 }
 

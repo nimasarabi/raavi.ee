@@ -19,7 +19,7 @@
 <!-- /base-path -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact - Nima Sarabi</title>
-<meta name="description" content="Event and product photographer based in Tartu, Estonia. Specializing in exhibitions, concerts, corporate events, and clean product photography for brands and small businesses.">
+<meta name="description" content="Book Nima Sarabi for your next event or product shoot in Estonia. Contact via email or use the booking form to get started.">
 
 <!-- seo-meta -->
 <link rel="canonical" href="https://www.raavi.ee/contact/">
@@ -30,7 +30,7 @@
 <meta name="author" content="Nima Sarabi">
 <meta property="og:site_name" content="Raavi Photography">
 <meta property="og:title" content="Contact - Nima Sarabi">
-<meta property="og:description" content="Event and product photographer based in Tartu, Estonia. Specializing in exhibitions, concerts, corporate events, and clean product photography for brands and small businesses.">
+<meta property="og:description" content="Book Nima Sarabi for your next event or product shoot in Estonia. Contact via email or use the booking form to get started.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.raavi.ee/contact/">
 <meta property="og:image" content="https://www.raavi.ee/assets/img/home/20251119_Nima+Sarabi__DSC6669.webp">
@@ -38,20 +38,47 @@
 <meta property="og:locale:alternate" content="et_EE">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact - Nima Sarabi">
-<meta name="twitter:description" content="Event and product photographer based in Tartu, Estonia. Specializing in exhibitions, concerts, corporate events, and clean product photography for brands and small businesses.">
+<meta name="twitter:description" content="Book Nima Sarabi for your next event or product shoot in Estonia. Contact via email or use the booking form to get started.">
 <meta name="twitter:image" content="https://www.raavi.ee/assets/img/home/20251119_Nima+Sarabi__DSC6669.webp">
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@type": "LocalBusiness",
- "name": "Raavi Photography",
- "url": "https://www.raavi.ee",
- "areaServed": "Estonia",
- "address": {
-   "@type": "PostalAddress",
-   "addressLocality": "Tartu",
-   "addressCountry": "EE"
- }
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://www.raavi.ee/#business",
+      "name": "Raavi Photography",
+      "url": "https://www.raavi.ee",
+      "email": "nima@raavi.ee",
+      "areaServed": { "@type": "Country", "name": "Estonia" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tartu",
+        "addressCountry": "EE"
+      },
+      "sameAs": [
+        "https://www.instagram.com/nima.sarabi/",
+        "https://www.tiktok.com/@nima.sarabi",
+        "https://www.facebook.com/nima.sarabi"
+      ],
+      "priceRange": "€€"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.raavi.ee/#person",
+      "name": "Nima Sarabi",
+      "jobTitle": "Photographer",
+      "url": "https://www.raavi.ee",
+      "worksFor": { "@id": "https://www.raavi.ee/#business" }
+    },
+    {
+      "@type": "ContactPage",
+      "name": "Contact Nima Sarabi – Raavi Photography",
+      "url": "https://www.raavi.ee/contact/",
+      "description": "Book Nima Sarabi for your next event or product shoot in Estonia.",
+      "mainEntity": { "@id": "https://www.raavi.ee/#business" }
+    }
+  ]
 }
 </script>
 <!-- /seo-meta -->
