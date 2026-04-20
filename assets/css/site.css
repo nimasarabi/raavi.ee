@@ -20,8 +20,12 @@
   --radius-md: 6px;
   --radius-pill: 999px;
   --footer-height: clamp(72px, 9vw, 96px);
-  --font-body: "Urbanist", "Poppins", sans-serif;
-  --font-display: "Poppins", "Urbanist", sans-serif;
+  --font-body: "Spectral", Georgia, serif;
+  --font-display: "Hanken Grotesk", system-ui, sans-serif;
+  --accent-brand: oklch(33% 0.09 42);
+  --accent-brand-hover: oklch(27% 0.08 42);
+  --accent-brand-text: oklch(35% 0.085 42);
+  --surface-warm: oklch(95.5% 0.012 55);
 }
 
 * {
@@ -38,8 +42,8 @@ body {
   font-family: var(--font-body);
   color: hsl(var(--black-hsl));
   background: hsl(var(--white-hsl));
-  line-height: 1.65;
-  letter-spacing: 0.01em;
+  line-height: 1.7;
+  letter-spacing: 0;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -52,9 +56,9 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display);
-  font-weight: 400;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
 }
 
 body.portfolio-index {
@@ -74,7 +78,7 @@ a {
 
 main a:hover,
 main a:focus-visible {
-  color: hsl(var(--accent-hsl));
+  color: var(--accent-brand-text);
 }
 
 .site-header a:hover,
@@ -134,9 +138,9 @@ body.has-hero main {
 
 .site-logo {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 1.6rem;
-  letter-spacing: 0.32em;
+  font-weight: 300;
+  font-size: 1.5rem;
+  letter-spacing: 0.38em;
   text-transform: uppercase;
   text-align: center;
 }
@@ -144,9 +148,11 @@ body.has-hero main {
 .main-nav {
   display: flex;
   gap: 2vw;
-  font-size: 0.82rem;
-  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  font-family: var(--font-display);
 }
 
 .main-nav a {
@@ -371,8 +377,15 @@ body.has-hero .main-nav a::after {
 }
 
 .hero--medium {
-  min-height: 66vh;
-  padding: 0;
+  min-height: 46vh;
+  padding: 0 var(--page-padding) clamp(36px, 5vw, 56px);
+  align-items: flex-start;
+}
+
+.hero--medium .hero-content {
+  max-width: 560px;
+  border-left: none;
+  padding-left: 0;
 }
 
 .hero::before {
@@ -407,11 +420,12 @@ body.has-hero .main-nav a::after {
   z-index: 1;
 }
 
-.hero h3 {
+.hero h1 {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(2rem, 3.2vw, 2.8rem);
-  line-height: 1.2;
+  font-weight: 300;
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
   margin: 0 0 30px;
 }
 
@@ -441,7 +455,7 @@ body.has-hero .main-nav a::after {
 
 .section-accent {
   position: relative;
-  background: hsl(var(--lightAccent-hsl));
+  background: var(--surface-warm);
   color: hsl(var(--black-hsl));
   padding-bottom: calc(var(--section-space) + 2vw);
   border-top: 1px solid var(--line);
@@ -506,27 +520,33 @@ body.has-hero .main-nav a::after {
   animation: rise-fade 0.8s ease-out both;
 }
 
-.page-title h3 {
+.page-title h1 {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(1.7rem, 3vw, 2.4rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-weight: 300;
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  letter-spacing: -0.02em;
+  text-transform: none;
   margin: 0;
 }
 
-.portfolio-detail .page-title h3 {
+.portfolio-detail .page-title h1 {
   color: hsla(var(--darkAccent-hsl), 0.7);
 }
 
 .portfolio-tiles {
-  padding: clamp(70px, 10vw, 120px) var(--page-padding) var(--section-space);
+  padding: 0;
+  overflow: hidden;
+}
+
+.portfolio-tiles .container {
+  width: 100%;
+  max-width: 100%;
 }
 
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: clamp(24px, 3vw, 60px);
+  gap: 2px;
 }
 
 .portfolio-grid > * {
@@ -544,9 +564,9 @@ body.has-hero .main-nav a::after {
 .portfolio-tile {
   position: relative;
   overflow: hidden;
-  min-height: clamp(260px, 36vw, 520px);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-soft);
+  min-height: clamp(360px, 62vh, 760px);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .portfolio-tile img {
@@ -560,8 +580,8 @@ body.has-hero .main-nav a::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, hsla(var(--black-hsl), 0.05) 0%, hsla(var(--black-hsl), 0.55) 100%);
-  transition: background 0.3s ease;
+  background: linear-gradient(180deg, hsla(var(--black-hsl), 0.08) 0%, hsla(var(--black-hsl), 0.38) 50%, hsla(var(--black-hsl), 0.55) 100%);
+  transition: background 0.35s ease;
   z-index: 1;
 }
 
@@ -570,7 +590,7 @@ body.has-hero .main-nav a::after {
 }
 
 .portfolio-tile:hover::after {
-  background: linear-gradient(180deg, hsla(var(--black-hsl), 0.2) 0%, hsla(var(--black-hsl), 0.7) 100%);
+  background: linear-gradient(180deg, hsla(var(--black-hsl), 0.18) 0%, hsla(var(--black-hsl), 0.48) 50%, hsla(var(--black-hsl), 0.68) 100%);
 }
 
 .portfolio-tile .tile-text {
@@ -580,14 +600,14 @@ body.has-hero .main-nav a::after {
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 300;
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   color: hsl(var(--white-hsl));
-  opacity: 0;
+  opacity: 0.85;
   transition: opacity 0.3s ease;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-shadow: 0 6px 18px hsla(var(--black-hsl), 0.45);
+  letter-spacing: 0.04em;
+  text-transform: none;
+  text-shadow: 0 2px 12px hsla(var(--black-hsl), 0.6);
   z-index: 2;
 }
 
@@ -646,15 +666,34 @@ body.has-hero .main-nav a::after {
   animation-delay: 0.1s;
 }
 
-.service-block h4 {
+.service-block h2 {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 1.7rem;
+  font-weight: 300;
+  font-size: clamp(1.5rem, 2.2vw, 1.9rem);
   margin: 0;
+  letter-spacing: -0.02em;
 }
 
 .service-block p {
   margin: 0;
+}
+
+.services-cta {
+  margin-top: clamp(48px, 7vw, 96px);
+  padding-top: clamp(32px, 4vw, 48px);
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.services-cta-note {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  color: hsl(var(--darkAccent-hsl));
+  letter-spacing: 0;
 }
 
 .service-note {
@@ -714,13 +753,15 @@ body.has-hero .main-nav a::after {
   font-size: 0.78rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: hsl(var(--accent-hsl));
+  color: var(--accent-brand-text);
   margin: 0;
 }
 
-.contact-text h4 {
+.contact-text h2 {
   margin: 0;
-  font-size: 1.7rem;
+  font-size: clamp(1.5rem, 2.2vw, 1.9rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
 }
 
 .contact-lead {
@@ -911,7 +952,9 @@ body.has-hero .main-nav a::after {
 
 form label {
   display: block;
-  font-size: 0.95rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 400;
   margin-bottom: 6px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -926,7 +969,9 @@ form textarea {
   border-radius: var(--radius-sm);
   border: 1px solid hsla(var(--black-hsl), 0.2);
   background: hsla(var(--white-hsl), 0.7);
-  font-family: var(--font-body);
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  letter-spacing: 0;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
@@ -967,8 +1012,8 @@ form textarea {
 form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not(.cur-year):not(.numInput):focus,
 form textarea:focus {
   outline: none;
-  border-color: hsla(var(--accent-hsl), 0.6);
-  box-shadow: 0 0 0 3px hsla(var(--accent-hsl), 0.15);
+  border-color: var(--accent-brand-text);
+  box-shadow: 0 0 0 3px oklch(33% 0.09 42 / 0.12);
   background: hsl(var(--white-hsl));
 }
 
@@ -1070,22 +1115,23 @@ form textarea:focus {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 28px;
-  border-radius: var(--radius-pill);
-  border: 1px solid hsla(var(--black-hsl), 0.3);
-  background: hsl(var(--black-hsl));
+  padding: 11px 26px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--accent-brand);
+  background: var(--accent-brand);
   color: hsl(var(--white-hsl));
-  font-size: 0.85rem;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
   font-weight: 400;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  letter-spacing: 0.03em;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .button:hover {
-  background: transparent;
-  color: hsl(var(--black-hsl));
+  background: var(--accent-brand-hover);
+  border-color: var(--accent-brand-hover);
+  color: hsl(var(--white-hsl));
 }
 
 .hero .button {
@@ -1239,7 +1285,7 @@ form textarea:focus {
 
 @media (hover: none) {
   .portfolio-tile::after {
-    background: linear-gradient(180deg, hsla(var(--white-hsl), 0.1) 0%, hsla(var(--white-hsl), 0.7) 100%);
+    background: linear-gradient(180deg, hsla(var(--black-hsl), 0.08) 0%, hsla(var(--black-hsl), 0.42) 50%, hsla(var(--black-hsl), 0.58) 100%);
   }
 
   .portfolio-tile .tile-text {
