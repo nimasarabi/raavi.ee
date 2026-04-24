@@ -1,19 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /*?itemId=
-Disallow: /cart
-Disallow: /et/cart
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Googlebot
-Allow: /
+Disallow: /cart/
+Disallow: /et/cart/
+Disallow: /en/
 
 Sitemap: https://www.raavi.ee/sitemap.xml
