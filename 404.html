@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<base href="/">
 
 <!-- base-path -->
 <script>
@@ -11,9 +12,8 @@
     if (location.hostname.endsWith('github.io') && path.length) {
       base = '/' + path[0] + '/';
     }
-    var baseEl = document.createElement('base');
+    var baseEl = document.querySelector('base');
     baseEl.href = base;
-    document.head.appendChild(baseEl);
   })();
 </script>
 <!-- /base-path -->
