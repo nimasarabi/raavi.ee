@@ -60,23 +60,23 @@ about:
 categories:
   product:
     label:
-      en: "Category 01"
-      et: "Kategooria 01"
+      en: "For brands & makers"
+      et: "Brändidele ja tootjatele"
     title:
       en: "Food & Product"
       et: "Toit ja toode"
     arrow:
-      en: "Explore →"
-      et: "Vaata →"
+      en: "See the work →"
+      et: "Vaata töid →"
     image: "/assets/img/portfolio/product/20250713_Nima+Sarabi_Lighthouse-016.webp"
   events:
     label:
-      en: "Category 02"
-      et: "Kategooria 02"
+      en: "On location, across Estonia"
+      et: "Kohapeal, üle Eesti"
     title:
       en: "Events"
       et: "Üritused"
     arrow:
-      en: "Explore →"
-      et: "Vaata →"
+      en: "See the work →"
+      et: "Vaata töid →"
     image: "/assets/img/portfolio/events/20240712_Nima+Sarabi__DSC7922.webp"
