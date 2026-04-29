@@ -4,11 +4,13 @@ brand:
   legal: "Raavi OÜ"
 
 contact:
-  email: "hello@raavi.ee"
-  phone: "+372 5XXX XXXX"
-  instagram_handle: "@nimasarabi"
-  instagram_url: "https://instagram.com/nimasarabi"
-  city: "Tallinn"
+  email: "nima@raavi.ee"
+  phone: ""
+  instagram_handle: "@nima.sarabi"
+  instagram_url: "https://www.instagram.com/nima.sarabi/"
+  tiktok_url: "https://www.tiktok.com/@nima.sarabi"
+  facebook_url: "https://www.facebook.com/nima.sarabi"
+  city: "Tartu"
   country:
     en: "Estonia"
     et: "Eesti"
@@ -21,8 +23,8 @@ nav:
     en: "Portfolio"
     et: "Portfoolio"
   prices:
-    en: "Prices"
-    et: "Hinnakiri"
+    en: "Services"
+    et: "Teenused"
   contact:
     en: "Contact"
     et: "Kontakt"

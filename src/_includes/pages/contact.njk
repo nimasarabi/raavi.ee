@@ -8,10 +8,10 @@
       <div class="contact-detail-label">{{ contact.details_label.email | t(lang) }}</div>
       <div class="contact-detail-val"><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></div>
     </div>
-    <div class="contact-detail">
+    {% if site.contact.phone %}<div class="contact-detail">
       <div class="contact-detail-label">{{ contact.details_label.phone | t(lang) }}</div>
       <div class="contact-detail-val">{{ site.contact.phone }}</div>
-    </div>
+    </div>{% endif %}
     <div class="contact-detail">
       <div class="contact-detail-label">{{ contact.details_label.studio | t(lang) }}</div>
       <div class="contact-detail-val">{{ site.contact.city }}, {{ site.contact.country | t(lang) }}</div>

@@ -1,52 +1,61 @@
 hero:
   eyebrow:
-    en: "Tallinn-based photographer"
-    et: "Fotograaf Tallinnast"
+    en: "Photographer in Tartu, Estonia"
+    et: "Fotograaf Tartus"
   title:
-    en: "Quiet light, <em>honest</em> stories."
-    et: "Vaikne valgus, <em>ausad</em> lood."
+    en: "Simple, <em>clear</em>, attentive photography."
+    et: "Lihtne, <em>selge</em>, tähelepanelik fotograafia."
   sub:
-    en: "Food, product and event photography for studios, restaurants and brands across the Nordics and the Baltics."
-    et: "Toidu-, toote- ja sündmusfotograafia stuudiotele, restoranidele ja brändidele Põhjamaades ning Baltikumis."
+    en: "Event, product and food photography for businesses, brands and cultural institutions across Estonia. Based in Tartu, working from Tallinn to Narva."
+    et: "Ürituste, toodete ja toidu fotograafia ettevõtetele, brändidele ja kultuuriasutustele üle Eesti. Tartus tegutsev fotograaf, kes liigub Tallinnast Narvani."
   cta_primary:
     en: "View portfolio"
     et: "Vaata portfooliot"
   cta_secondary:
     en: "Get in touch"
     et: "Võta ühendust"
-  image: "/assets/img/home/20251119_Nima+Sarabi__DSC6669.webp"
+  image: "/assets/img/portfolio/events/20210629_Nima+Sarabi_IMG_2134_003.webp"
   alt:
-    en: "A still scene from Nima Sarabi's photography work."
-    et: "Vaikne kaader Nima Sarabi fotograafiast."
+    en: "On-stage event photography by Nima Sarabi."
+    et: "Lavaürituse foto, Nima Sarabi."
 
 about:
   eyebrow:
     en: "About"
     et: "Minust"
   heading:
-    en: "An eye for stillness, a feel for the moment."
-    et: "Silm pilgu jaoks, käsi hetke jaoks."
+    en: "Quietly focused, attentive to the details that matter."
+    et: "Vaikselt fokuseeritud, tähelepanelik oluliste detailide suhtes."
   body:
     en: |
-      I'm Nima Sarabi, a photographer based in Tallinn. I work with restaurants,
-      product brands and event organisers who care about how their work is seen —
-      not just shown.
+      I'm Nima Sarabi, a photographer based in Tartu and working across
+      Estonia. I focus on event, product and food photography — clear,
+      direct images that help clients show their work at its best.
 
-      My approach is patient and minimal. Natural light when it serves the story,
-      careful staging when it doesn't. The aim is always the same: an image that
-      feels true to its subject and quietly memorable.
+      My approach is straightforward. I work quietly, stay focused, and
+      pay attention to the details that matter.
+
+      I come from a design and model-making background, where accuracy
+      and clarity matter. That work trains you to notice the small things,
+      and I bring the same discipline into my photography. Clean
+      composition, controlled light, honest documentation.
     et: |
-      Olen Nima Sarabi, Tallinnas tegutsev fotograaf. Töötan restoranide,
-      tootebrändide ja sündmuste korraldajatega, kelle jaoks loeb mitte ainult
-      see, et neid nähakse — vaid kuidas neid nähakse.
+      Olen Nima Sarabi, Tartus tegutsev fotograaf, kes töötab üle Eesti.
+      Keskendun ürituste, toodete ja toidu pildistamisele, luues selgeid
+      ja otseseid pilte, mis aitavad klientidel oma töid parimal moel
+      esitleda.
 
-      Pildistan rahulikult ja minimalistlikult. Loomulik valgus, kui see lugu
-      kannab, hoolikas seadistus, kui mitte. Eesmärk on alati sama: kaader, mis
-      on truu oma teemale ja jääb vaikselt meelde.
-  image: "/assets/img/services/20231217_1.webp"
+      Minu lähenemine on lihtne. Töötan vaikselt, hoian fookust ja
+      pööran tähelepanu olulistele detailidele.
+
+      Mul on disaini ja maketitegemise taust, kus täpsus ja selgus on
+      olulised. See töö õpetab märkama väikseid asju ning kannan sama
+      distsipliini oma fotograafiasse. Puhas kompositsioon, kontrollitud
+      valgus ja aus dokumenteerimine.
+  image: "/assets/img/home/20251119_Nima+Sarabi__DSC6669.webp"
   alt:
-    en: "A muted portrait — Nima at work."
-    et: "Tagasihoidlik portree — Nima töö juures."
+    en: "Portrait of Nima Sarabi, photographer based in Tartu, Estonia."
+    et: "Nima Sarabi, Tartus tegutsev fotograaf."
 
 categories:
   product:
@@ -66,7 +75,7 @@ categories:
       et: "Kategooria 02"
     title:
       en: "Events"
-      et: "Sündmused"
+      et: "Üritused"
     arrow:
       en: "Explore →"
       et: "Vaata →"
