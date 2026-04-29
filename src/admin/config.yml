@@ -1,0 +1,167 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+site_url: "https://www.raavi.ee"
+display_url: "https://www.raavi.ee"
+locale: "en"
+
+collections:
+  - name: site
+    label: "Site settings"
+    files:
+      - file: "src/_data/site.yml"
+        label: "Brand & contact"
+        name: settings
+        fields:
+          - { label: "Brand name", name: brand, widget: object, fields: [
+              { label: "Display name", name: name, widget: string },
+              { label: "Highlighted word", name: accent_word, widget: string, hint: "The part shown in accent color, e.g. 'Sarabi' inside 'Nima Sarabi'" },
+              { label: "Legal entity", name: legal, widget: string }
+            ] }
+          - { label: "Contact", name: contact, widget: object, fields: [
+              { label: "Email", name: email, widget: string },
+              { label: "Phone", name: phone, widget: string },
+              { label: "Instagram handle", name: instagram_handle, widget: string },
+              { label: "Instagram URL", name: instagram_url, widget: string },
+              { label: "City", name: city, widget: string },
+              { label: "Country (EN)", name: "country.en", widget: string },
+              { label: "Country (ET)", name: "country.et", widget: string }
+            ] }
+
+  - name: home
+    label: "Home page"
+    files:
+      - file: "src/_data/home.yml"
+        label: "Home page"
+        name: home
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: "Eyebrow (EN)", name: "eyebrow.en", widget: string }
+              - { label: "Eyebrow (ET)", name: "eyebrow.et", widget: string }
+              - { label: "Title (EN, allows <em>italic</em>)", name: "title.en", widget: string }
+              - { label: "Title (ET, allows <em>italic</em>)", name: "title.et", widget: string }
+              - { label: "Subtitle (EN)", name: "sub.en", widget: text }
+              - { label: "Subtitle (ET)", name: "sub.et", widget: text }
+              - { label: "Primary CTA (EN)", name: "cta_primary.en", widget: string }
+              - { label: "Primary CTA (ET)", name: "cta_primary.et", widget: string }
+              - { label: "Secondary CTA (EN)", name: "cta_secondary.en", widget: string }
+              - { label: "Secondary CTA (ET)", name: "cta_secondary.et", widget: string }
+              - { label: "Hero image", name: image, widget: image }
+              - { label: "Image alt (EN)", name: "alt.en", widget: string, required: false }
+              - { label: "Image alt (ET)", name: "alt.et", widget: string, required: false }
+          - label: About
+            name: about
+            widget: object
+            fields:
+              - { label: "Eyebrow (EN)", name: "eyebrow.en", widget: string }
+              - { label: "Eyebrow (ET)", name: "eyebrow.et", widget: string }
+              - { label: "Heading (EN)", name: "heading.en", widget: string }
+              - { label: "Heading (ET)", name: "heading.et", widget: string }
+              - { label: "Body (EN)", name: "body.en", widget: text }
+              - { label: "Body (ET)", name: "body.et", widget: text }
+              - { label: "Portrait", name: image, widget: image }
+              - { label: "Image alt (EN)", name: "alt.en", widget: string, required: false }
+              - { label: "Image alt (ET)", name: "alt.et", widget: string, required: false }
+          - label: "Category cards"
+            name: categories
+            widget: object
+            fields:
+              - label: "Food & Product"
+                name: product
+                widget: object
+                fields:
+                  - { label: "Label (EN)", name: "label.en", widget: string }
+                  - { label: "Label (ET)", name: "label.et", widget: string }
+                  - { label: "Title (EN)", name: "title.en", widget: string }
+                  - { label: "Title (ET)", name: "title.et", widget: string }
+                  - { label: "Arrow text (EN)", name: "arrow.en", widget: string }
+                  - { label: "Arrow text (ET)", name: "arrow.et", widget: string }
+                  - { label: "Image", name: image, widget: image }
+              - label: "Events"
+                name: events
+                widget: object
+                fields:
+                  - { label: "Label (EN)", name: "label.en", widget: string }
+                  - { label: "Label (ET)", name: "label.et", widget: string }
+                  - { label: "Title (EN)", name: "title.en", widget: string }
+                  - { label: "Title (ET)", name: "title.et", widget: string }
+                  - { label: "Arrow text (EN)", name: "arrow.en", widget: string }
+                  - { label: "Arrow text (ET)", name: "arrow.et", widget: string }
+                  - { label: "Image", name: image, widget: image }
+
+  - name: portfolio
+    label: "Portfolio items"
+    folder: "src/_portfolio"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    fields:
+      - { label: "Title (EN)", name: title_en, widget: string, required: false }
+      - { label: "Title (ET)", name: title_et, widget: string, required: false }
+      - label: "Category"
+        name: category
+        widget: select
+        options: ["product", "events"]
+      - { label: "Image", name: image, widget: image }
+      - { label: "Sort order", name: order, widget: number, required: false, hint: "Lower = earlier in the grid. Product items use 1–99, events 100+." }
+      - { label: "Body (optional)", name: body, widget: markdown, required: false }
+
+  - name: prices
+    label: "Prices page"
+    files:
+      - file: "src/_data/prices.yml"
+        label: "Prices"
+        name: prices
+        fields:
+          - { label: "Page title (EN)", name: "title.en", widget: string }
+          - { label: "Page title (ET)", name: "title.et", widget: string }
+          - { label: "Intro (EN)", name: "sub.en", widget: text }
+          - { label: "Intro (ET)", name: "sub.et", widget: text }
+          - label: "Sections"
+            name: sections
+            widget: list
+            fields:
+              - { label: "ID (slug)", name: id, widget: string }
+              - { label: "Section title (EN)", name: "title.en", widget: string }
+              - { label: "Section title (ET)", name: "title.et", widget: string }
+              - { label: "Section sub (EN)", name: "sub.en", widget: string }
+              - { label: "Section sub (ET)", name: "sub.et", widget: string }
+              - label: "Rows"
+                name: rows
+                widget: list
+                fields:
+                  - { label: "Item name (EN)", name: "name.en", widget: string }
+                  - { label: "Item name (ET)", name: "name.et", widget: string }
+                  - { label: "Description (EN)", name: "desc.en", widget: string }
+                  - { label: "Description (ET)", name: "desc.et", widget: string }
+                  - { label: "Amount", name: amount, widget: string, hint: "e.g. €450 or 'From €1,200' or 'Included'" }
+              - { label: "Note (EN)", name: "note.en", widget: text, required: false }
+              - { label: "Note (ET)", name: "note.et", widget: text, required: false }
+          - label: "CTA"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Text (EN)", name: "text.en", widget: text }
+              - { label: "Text (ET)", name: "text.et", widget: text }
+              - { label: "Button (EN)", name: "button.en", widget: string }
+              - { label: "Button (ET)", name: "button.et", widget: string }
+
+  - name: contact
+    label: "Contact page"
+    files:
+      - file: "src/_data/contact.yml"
+        label: "Contact page"
+        name: contact
+        fields:
+          - { label: "Title (EN)", name: "title.en", widget: string }
+          - { label: "Title (ET)", name: "title.et", widget: string }
+          - { label: "Body (EN)", name: "body.en", widget: text }
+          - { label: "Body (ET)", name: "body.et", widget: text }

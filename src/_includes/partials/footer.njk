@@ -1,0 +1,10 @@
+{%- set L = locales[lang] -%}
+<footer class="footer" role="contentinfo">
+  <div class="footer-logo">{{ site.brand.name | replace(site.brand.accent_word, '<span>' + site.brand.accent_word + '</span>') | safe }}</div>
+  <div class="footer-copy">© {% year %} {{ site.brand.legal }}. {{ site.footer.rights | t(lang) }}</div>
+  <div class="footer-links">
+    <a href="{{ L.portfolio_url }}">{{ site.nav.portfolio | t(lang) }}</a>
+    <a href="{{ L.contact_url }}">{{ site.nav.contact | t(lang) }}</a>
+    {% if site.contact.instagram_url %}<a href="{{ site.contact.instagram_url }}" target="_blank" rel="noopener">Instagram</a>{% endif %}
+  </div>
+</footer>

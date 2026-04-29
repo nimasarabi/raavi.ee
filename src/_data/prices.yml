@@ -1,0 +1,60 @@
+title:
+  en: "Prices."
+  et: "Hinnakiri."
+sub:
+  en: "Transparent rates for studio and on-location work. Each project is unique — get in touch for a tailored quote that includes editing, licensing and delivery."
+  et: "Läbipaistvad hinnad stuudios ja kohapeal tehtud tööde eest. Iga projekt on erinev — võta ühendust, et saada pakkumine, mis sisaldab töötlust, litsentsi ja üleandmist."
+sections:
+  - id: product
+    title:
+      en: "Food & Product"
+      et: "Toit ja toode"
+    sub:
+      en: "Studio or on-site. Half-day from 4 hours, full day up to 8."
+      et: "Stuudios või kohapeal. Pool päeva alates 4 tunnist, terve päev kuni 8 tundi."
+    rows:
+      - name: { en: "Half-day session", et: "Poolepäevane sessioon" }
+        desc: { en: "Up to 10 finished images, basic retouch", et: "Kuni 10 lõplikku kaadrit, põhitöötlus" }
+        amount: "€450"
+      - name: { en: "Full-day session", et: "Täispäevane sessioon" }
+        desc: { en: "Up to 25 finished images, basic retouch", et: "Kuni 25 lõplikku kaadrit, põhitöötlus" }
+        amount: "€780"
+      - name: { en: "Per additional image", et: "Lisakaader" }
+        desc: { en: "Beyond the package, edited", et: "Paketi väliselt, töödeldud" }
+        amount: "€25"
+      - name: { en: "Studio rental (incl.)", et: "Stuudio rent (sh)" }
+        desc: { en: "Tallinn studio, included in day rates", et: "Tallinna stuudio, sisaldub päevahinnas" }
+        amount: "Included"
+    note:
+      en: "Final pricing depends on shot count, post-production complexity and licensing. VAT (22%) added for invoicing entities; private clients pay the listed price."
+      et: "Lõpphind sõltub kaadrite arvust, järeltöötluse mahust ja litsentsist. Käibemaks (22%) lisandub juriidilistele isikutele; eraisikud maksavad hinnakirjajärgse hinna."
+  - id: events
+    title:
+      en: "Events"
+      et: "Sündmused"
+    sub:
+      en: "Conferences, openings, weddings and private gatherings."
+      et: "Konverentsid, avamised, pulmad ja eraüritused."
+    rows:
+      - name: { en: "Up to 2 hours", et: "Kuni 2 tundi" }
+        desc: { en: "Edited gallery delivered within 7 days", et: "Töödeldud galerii üle antud 7 päeva jooksul" }
+        amount: "€280"
+      - name: { en: "Half-day (4 h)", et: "Poolepäevane (4 t)" }
+        desc: { en: "Edited gallery delivered within 7 days", et: "Töödeldud galerii üle antud 7 päeva jooksul" }
+        amount: "€520"
+      - name: { en: "Full-day (8 h)", et: "Täispäevane (8 t)" }
+        desc: { en: "Edited gallery delivered within 10 days", et: "Töödeldud galerii üle antud 10 päeva jooksul" }
+        amount: "€880"
+      - name: { en: "Wedding day", et: "Pulmapäev" }
+        desc: { en: "Up to 10 hours, two-photographer option available", et: "Kuni 10 tundi, võimalus kahe fotograafiga" }
+        amount: "From €1,200"
+    note:
+      en: "Travel within Tallinn included. Outside Tallinn invoiced at €0.40/km. Rush delivery available on request."
+      et: "Sõit Tallinna piires hinnas. Väljaspool Tallinna 0,40 €/km. Kiir-üleandmine kokkuleppel."
+cta:
+  text:
+    en: "Have something specific in mind? Let's design a quote together."
+    et: "On midagi konkreetset mõttes? Teeme koos sobiva pakkumise."
+  button:
+    en: "Start an inquiry"
+    et: "Saada päring"

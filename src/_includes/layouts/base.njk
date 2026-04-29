@@ -1,0 +1,30 @@
+<!doctype html>
+{%- set L = locales[lang] -%}
+<html lang="{{ lang }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }} — {{ site.brand.name }}</title>
+{% if description %}<meta name="description" content="{{ description }}">{% endif %}
+<link rel="canonical" href="https://www.raavi.ee{{ page.url }}">
+<link rel="alternate" hreflang="en" href="https://www.raavi.ee{{ alternate_url_en or '/' }}">
+<link rel="alternate" hreflang="et" href="https://www.raavi.ee{{ alternate_url_et or '/et/' }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css?v={{ page.date.getTime() if page.date else 1 }}">
+<meta property="og:title" content="{{ title }} — {{ site.brand.name }}">
+{% if description %}<meta property="og:description" content="{{ description }}">{% endif %}
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.raavi.ee{{ page.url }}">
+<meta property="og:locale" content="{{ 'et_EE' if lang == 'et' else 'en_US' }}">
+</head>
+<body class="{{ body_class }}">
+{% include "partials/nav.njk" %}
+<main>
+{{ content | safe }}
+</main>
+{% include "partials/footer.njk" %}
+<script src="/assets/js/site.js?v={{ page.date.getTime() if page.date else 1 }}" defer></script>
+</body>
+</html>

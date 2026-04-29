@@ -1,0 +1,15 @@
+{
+  "name": "raavi-ee",
+  "version": "2.0.0",
+  "description": "Raavi OÜ — photography by Nima Sarabi",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve --port=8080",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "js-yaml": "^4.1.0"
+  }
+}

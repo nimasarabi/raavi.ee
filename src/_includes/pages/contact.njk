@@ -1,0 +1,75 @@
+{%- set L = locales[lang] -%}
+<section class="contact-wrap">
+  <div class="contact-info">
+    <h1 class="contact-title">{{ contact.title | t(lang) }}</h1>
+    <p class="contact-body">{{ contact.body | t(lang) }}</p>
+
+    <div class="contact-detail">
+      <div class="contact-detail-label">{{ contact.details_label.email | t(lang) }}</div>
+      <div class="contact-detail-val"><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></div>
+    </div>
+    <div class="contact-detail">
+      <div class="contact-detail-label">{{ contact.details_label.phone | t(lang) }}</div>
+      <div class="contact-detail-val">{{ site.contact.phone }}</div>
+    </div>
+    <div class="contact-detail">
+      <div class="contact-detail-label">{{ contact.details_label.studio | t(lang) }}</div>
+      <div class="contact-detail-val">{{ site.contact.city }}, {{ site.contact.country | t(lang) }}</div>
+    </div>
+    <div class="contact-detail">
+      <div class="contact-detail-label">{{ contact.details_label.social | t(lang) }}</div>
+      <div class="contact-detail-val"><a href="{{ site.contact.instagram_url }}" target="_blank" rel="noopener">{{ site.contact.instagram_handle }}</a></div>
+    </div>
+  </div>
+
+  <form class="inquiry-form" name="inquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="{{ L.contact_url }}?ok=1#thanks">
+    <input type="hidden" name="form-name" value="inquiry">
+    <p class="form-honey"><label>Don't fill this out: <input name="bot-field"></label></p>
+    {% if not page.url.endsWith('?ok=1') %}{% endif %}
+    {% set ok = page.url and ('?ok=1' in page.url) %}
+
+    <div class="form-row">
+      <div class="form-group"><label for="name">{{ contact.form.name | t(lang) }}</label><input id="name" name="name" type="text" required></div>
+      <div class="form-group"><label for="email">{{ contact.form.email | t(lang) }}</label><input id="email" name="email" type="email" required></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label for="phone">{{ contact.form.phone | t(lang) }}</label><input id="phone" name="phone" type="tel"></div>
+      <div class="form-group">
+        <label for="type">{{ contact.form.type | t(lang) }}</label>
+        <select id="type" name="project_type">
+          <option value="">{{ contact.form.type_choose | t(lang) }}</option>
+          <option>{{ contact.form.type_product | t(lang) }}</option>
+          <option>{{ contact.form.type_event | t(lang) }}</option>
+          <option>{{ contact.form.type_other | t(lang) }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label for="date">{{ contact.form.date | t(lang) }}</label><input id="date" name="preferred_date" type="date"></div>
+      <div class="form-group">
+        <label for="budget">{{ contact.form.budget | t(lang) }}</label>
+        <select id="budget" name="budget">
+          <option value="">{{ contact.form.budget_choose | t(lang) }}</option>
+          <option>{{ contact.form.budget_low | t(lang) }}</option>
+          <option>{{ contact.form.budget_mid | t(lang) }}</option>
+          <option>{{ contact.form.budget_high | t(lang) }}</option>
+          <option>{{ contact.form.budget_open | t(lang) }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="message">{{ contact.form.message | t(lang) }}</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+    </div>
+    <button class="btn-primary form-submit" type="submit">{{ contact.form.submit | t(lang) }}</button>
+
+    <div id="thanks" class="success-msg" style="margin-top:32px; display:none">{{ contact.form.success | t(lang) }}</div>
+  </form>
+</section>
+
+<script>
+if (location.search.indexOf('ok=1') !== -1) {
+  var msg = document.getElementById('thanks');
+  if (msg) { msg.style.display = 'block'; document.querySelector('.inquiry-form').reset(); msg.scrollIntoView({behavior:'smooth', block:'center'}); }
+}
+</script>

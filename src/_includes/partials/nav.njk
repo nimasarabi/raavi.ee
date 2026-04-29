@@ -1,0 +1,17 @@
+{%- set L = locales[lang] -%}
+{%- set O = locales[L.other] -%}
+<header class="nav" role="banner">
+  <a href="{{ L.home_url }}" class="nav-logo">{{ site.brand.name | replace(site.brand.accent_word, '<span>' + site.brand.accent_word + '</span>') | safe }}</a>
+  <button class="nav-burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <ul class="nav-links" role="navigation">
+    <li><a href="{{ L.home_url }}" {% if active == 'home' %}class="active"{% endif %}>{{ site.nav.home | t(lang) }}</a></li>
+    <li><a href="{{ L.portfolio_url }}" {% if active == 'portfolio' %}class="active"{% endif %}>{{ site.nav.portfolio | t(lang) }}</a></li>
+    <li><a href="{{ L.prices_url }}" {% if active == 'prices' %}class="active"{% endif %}>{{ site.nav.prices | t(lang) }}</a></li>
+    <li><a href="{{ L.contact_url }}" {% if active == 'contact' %}class="active"{% endif %}>{{ site.nav.contact | t(lang) }}</a></li>
+    <li class="nav-lang">
+      <a class="lang-btn active" href="{{ L.home_url if active == 'home' else (L.portfolio_url if active == 'portfolio' else (L.prices_url if active == 'prices' else L.contact_url)) }}">{{ L.label }}</a>
+      <span class="lang-sep">/</span>
+      <a class="lang-btn" href="{{ alternate_url }}">{{ O.label }}</a>
+    </li>
+  </ul>
+</header>

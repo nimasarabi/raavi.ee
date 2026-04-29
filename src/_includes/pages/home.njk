@@ -1,0 +1,48 @@
+{%- set L = locales[lang] -%}
+<section class="hero">
+  <div class="hero-bg">
+    {% if home.hero.image %}<img src="{{ home.hero.image }}" alt="{{ home.hero.alt | t(lang) }}">{% endif %}
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">{{ home.hero.eyebrow | t(lang) }}</div>
+    <h1 class="hero-title">{{ home.hero.title | t(lang) | safe }}</h1>
+    <p class="hero-sub">{{ home.hero.sub | t(lang) }}</p>
+    <div class="hero-cta">
+      <a class="btn-primary" href="{{ L.portfolio_url }}">{{ home.hero.cta_primary | t(lang) }}</a>
+      <a class="btn-ghost" href="{{ L.contact_url }}">{{ home.hero.cta_secondary | t(lang) }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="about-strip">
+  <div>
+    <div class="eyebrow">{{ home.about.eyebrow | t(lang) }}</div>
+    <h2 class="heading-display">{{ home.about.heading | t(lang) }}</h2>
+    <div class="body-prose">
+      {% set body = home.about.body | t(lang) %}
+      {% for para in body.split("\n\n") %}<p>{{ para | trim }}</p>{% endfor %}
+    </div>
+  </div>
+  <div class="about-img">
+    {% if home.about.image %}<img src="{{ home.about.image }}" alt="{{ home.about.alt | t(lang) }}">{% endif %}
+  </div>
+</section>
+
+<section class="categories">
+  <a class="cat-card" href="{{ L.portfolio_url }}?cat=product">
+    <div class="cat-bg"><img src="{{ home.categories.product.image }}" alt=""></div>
+    <div class="cat-overlay">
+      <div class="cat-label">{{ home.categories.product.label | t(lang) }}</div>
+      <div class="cat-title">{{ home.categories.product.title | t(lang) }}</div>
+      <div class="cat-arrow">{{ home.categories.product.arrow | t(lang) }}</div>
+    </div>
+  </a>
+  <a class="cat-card" href="{{ L.portfolio_url }}?cat=events">
+    <div class="cat-bg"><img src="{{ home.categories.events.image }}" alt=""></div>
+    <div class="cat-overlay">
+      <div class="cat-label">{{ home.categories.events.label | t(lang) }}</div>
+      <div class="cat-title">{{ home.categories.events.title | t(lang) }}</div>
+      <div class="cat-arrow">{{ home.categories.events.arrow | t(lang) }}</div>
+    </div>
+  </a>
+</section>

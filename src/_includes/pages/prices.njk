@@ -1,0 +1,32 @@
+{%- set L = locales[lang] -%}
+<section class="prices-wrap">
+  <header class="prices-header">
+    <h1 class="prices-title">{{ prices.title | t(lang) }}</h1>
+    <p class="prices-sub">{{ prices.sub | t(lang) }}</p>
+  </header>
+
+  {% for section in prices.sections %}
+  <section class="prices-section">
+    <h2 class="prices-section-title">{{ section.title | t(lang) }}</h2>
+    <p class="prices-section-sub">{{ section.sub | t(lang) }}</p>
+    <table class="price-table">
+      <tbody>
+      {% for row in section.rows %}
+        <tr>
+          <td>{{ row.name | t(lang) }}</td>
+          <td class="desc">{{ row.desc | t(lang) }}</td>
+          <td class="amt">{{ row.amount }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% if section.note %}<p class="price-note">{{ section.note | t(lang) }}</p>{% endif %}
+  </section>
+  {% if not loop.last %}<hr class="divider">{% endif %}
+  {% endfor %}
+
+  <div class="prices-cta-box">
+    <p>{{ prices.cta.text | t(lang) }}</p>
+    <a class="btn-primary" href="{{ L.contact_url }}">{{ prices.cta.button | t(lang) }}</a>
+  </div>
+</section>

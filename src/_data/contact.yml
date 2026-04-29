@@ -1,0 +1,42 @@
+title:
+  en: "Let's make something."
+  et: "Teeme midagi koos."
+body:
+  en: "Tell me a little about your project — the scope, the timing, anything you're picturing. I'll come back within two working days."
+  et: "Räägi pisut oma projektist — maht, ajakava, mis sa silmas pead. Vastan kahe tööpäeva jooksul."
+
+details_label:
+  email:
+    en: "Email"
+    et: "E-post"
+  phone:
+    en: "Phone"
+    et: "Telefon"
+  studio:
+    en: "Studio"
+    et: "Stuudio"
+  social:
+    en: "Social"
+    et: "Sotsiaalmeedia"
+
+form:
+  name: { en: "Name", et: "Nimi" }
+  email: { en: "Email", et: "E-post" }
+  phone: { en: "Phone", et: "Telefon" }
+  type: { en: "Project type", et: "Projekti tüüp" }
+  type_choose: { en: "Select…", et: "Vali…" }
+  type_product: { en: "Food & Product", et: "Toit ja toode" }
+  type_event: { en: "Event", et: "Sündmus" }
+  type_other: { en: "Other", et: "Muu" }
+  date: { en: "Preferred date", et: "Sobiv kuupäev" }
+  budget: { en: "Budget (€)", et: "Eelarve (€)" }
+  budget_choose: { en: "Select…", et: "Vali…" }
+  budget_low: { en: "Up to €500", et: "Kuni 500 €" }
+  budget_mid: { en: "€500 – €1,500", et: "500 – 1500 €" }
+  budget_high: { en: "€1,500 – €5,000", et: "1500 – 5000 €" }
+  budget_open: { en: "Open / discuss", et: "Lahtine / arutame" }
+  message: { en: "Message", et: "Sõnum" }
+  submit: { en: "Send inquiry", et: "Saada päring" }
+  success:
+    en: "Thanks — your inquiry is in. I'll come back within two working days."
+    et: "Aitäh — päring on kohale jõudnud. Vastan kahe tööpäeva jooksul."

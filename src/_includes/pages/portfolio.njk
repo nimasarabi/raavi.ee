@@ -1,0 +1,41 @@
+<section class="port-header">
+  <h1 class="port-title">{{ portfolio_page.title | t(lang) }}</h1>
+  <div class="port-filters">
+    <button class="filter-btn active" data-filter="all">{{ portfolio_page.filter_all | t(lang) }}</button>
+    <button class="filter-btn" data-filter="product">{{ portfolio_page.filter_product | t(lang) }}</button>
+    <button class="filter-btn" data-filter="events">{{ portfolio_page.filter_events | t(lang) }}</button>
+  </div>
+</section>
+
+<section class="masonry-grid">
+{% for item in collections.portfolio %}
+  {% set d = item.data %}
+  {% set t = (d.title_et if lang == 'et' else d.title_en) or '' %}
+  <a class="masonry-item" data-category="{{ d.category }}" data-full="{{ d.image }}" data-caption="{{ t }}" href="{{ d.image }}">
+    <div class="img-wrap"><img src="{{ d.image }}" alt="{{ t }}" loading="lazy" decoding="async"></div>
+  </a>
+{% endfor %}
+</section>
+
+<div class="lightbox" role="dialog" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <button class="lightbox-prev" aria-label="Previous">‹</button>
+  <button class="lightbox-next" aria-label="Next">›</button>
+  <div class="lightbox-inner">
+    <div class="lightbox-img"><img src="" alt=""></div>
+    <div class="lightbox-caption"></div>
+  </div>
+</div>
+
+<script>
+// Auto-apply ?cat= filter on load
+(function () {
+  const params = new URLSearchParams(location.search);
+  const cat = params.get('cat');
+  if (!cat) return;
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.querySelector('.filter-btn[data-filter="' + cat + '"]');
+    if (btn) btn.click();
+  });
+})();
+</script>

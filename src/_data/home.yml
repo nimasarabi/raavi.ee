@@ -1,0 +1,73 @@
+hero:
+  eyebrow:
+    en: "Tallinn-based photographer"
+    et: "Fotograaf Tallinnast"
+  title:
+    en: "Quiet light, <em>honest</em> stories."
+    et: "Vaikne valgus, <em>ausad</em> lood."
+  sub:
+    en: "Food, product and event photography for studios, restaurants and brands across the Nordics and the Baltics."
+    et: "Toidu-, toote- ja sündmusfotograafia stuudiotele, restoranidele ja brändidele Põhjamaades ning Baltikumis."
+  cta_primary:
+    en: "View portfolio"
+    et: "Vaata portfooliot"
+  cta_secondary:
+    en: "Get in touch"
+    et: "Võta ühendust"
+  image: "/assets/img/home/20251119_Nima+Sarabi__DSC6669.webp"
+  alt:
+    en: "A still scene from Nima Sarabi's photography work."
+    et: "Vaikne kaader Nima Sarabi fotograafiast."
+
+about:
+  eyebrow:
+    en: "About"
+    et: "Minust"
+  heading:
+    en: "An eye for stillness, a feel for the moment."
+    et: "Silm pilgu jaoks, käsi hetke jaoks."
+  body:
+    en: |
+      I'm Nima Sarabi, a photographer based in Tallinn. I work with restaurants,
+      product brands and event organisers who care about how their work is seen —
+      not just shown.
+
+      My approach is patient and minimal. Natural light when it serves the story,
+      careful staging when it doesn't. The aim is always the same: an image that
+      feels true to its subject and quietly memorable.
+    et: |
+      Olen Nima Sarabi, Tallinnas tegutsev fotograaf. Töötan restoranide,
+      tootebrändide ja sündmuste korraldajatega, kelle jaoks loeb mitte ainult
+      see, et neid nähakse — vaid kuidas neid nähakse.
+
+      Pildistan rahulikult ja minimalistlikult. Loomulik valgus, kui see lugu
+      kannab, hoolikas seadistus, kui mitte. Eesmärk on alati sama: kaader, mis
+      on truu oma teemale ja jääb vaikselt meelde.
+  image: "/assets/img/services/20231217_1.webp"
+  alt:
+    en: "A muted portrait — Nima at work."
+    et: "Tagasihoidlik portree — Nima töö juures."
+
+categories:
+  product:
+    label:
+      en: "Category 01"
+      et: "Kategooria 01"
+    title:
+      en: "Food & Product"
+      et: "Toit ja toode"
+    arrow:
+      en: "Explore →"
+      et: "Vaata →"
+    image: "/assets/img/portfolio/product/20250713_Nima+Sarabi_Lighthouse-016.webp"
+  events:
+    label:
+      en: "Category 02"
+      et: "Kategooria 02"
+    title:
+      en: "Events"
+      et: "Sündmused"
+    arrow:
+      en: "Explore →"
+      et: "Vaata →"
+    image: "/assets/img/portfolio/events/20240712_Nima+Sarabi__DSC7922.webp"

@@ -1,0 +1,36 @@
+brand:
+  name: "Nima Sarabi"
+  accent_word: "Sarabi"
+  legal: "Raavi OÜ"
+
+contact:
+  email: "hello@raavi.ee"
+  phone: "+372 5XXX XXXX"
+  instagram_handle: "@nimasarabi"
+  instagram_url: "https://instagram.com/nimasarabi"
+  city: "Tallinn"
+  country:
+    en: "Estonia"
+    et: "Eesti"
+
+nav:
+  home:
+    en: "Home"
+    et: "Avaleht"
+  portfolio:
+    en: "Portfolio"
+    et: "Portfoolio"
+  prices:
+    en: "Prices"
+    et: "Hinnakiri"
+  contact:
+    en: "Contact"
+    et: "Kontakt"
+
+footer:
+  rights:
+    en: "All rights reserved."
+    et: "Kõik õigused kaitstud."
+  built_with:
+    en: "Photography by Nima Sarabi"
+    et: "Fotograafia: Nima Sarabi"
