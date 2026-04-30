@@ -31,8 +31,8 @@ logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 media_folder: "assets/img/uploads"
 public_folder: "/assets/img/uploads"
 
-site_url: https://celebrated-halva-af81c4.netlify.app
-display_url: https://celebrated-halva-af81c4.netlify.app
+site_url: https://nimasarabi.netlify.app
+display_url: https://nimasarabi.netlify.app
 locale: "en"
 
 collections:
