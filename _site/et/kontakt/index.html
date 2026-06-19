@@ -1,0 +1,126 @@
+<!doctype html><html lang="et">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt — Nima Sarabi</title>
+<meta name="description" content="Alusta projekti — saad pakkumise kahe tööpäeva jooksul.">
+<link rel="canonical" href="https://www.raavi.ee/et/kontakt/">
+<link rel="alternate" hreflang="en" href="https://www.raavi.ee/contact/">
+<link rel="alternate" hreflang="et" href="https://www.raavi.ee/et/kontakt/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css?v=1777476923350">
+<meta property="og:title" content="Kontakt — Nima Sarabi">
+<meta property="og:description" content="Alusta projekti — saad pakkumise kahe tööpäeva jooksul.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.raavi.ee/et/kontakt/">
+<meta property="og:locale" content="et_EE">
+</head>
+<body class="">
+<header class="nav" role="banner">
+  <a href="/et/" class="nav-logo">Nima <span>Sarabi</span></a>
+  <button class="nav-burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <ul class="nav-links" role="navigation">
+    <li><a href="/et/" >Avaleht</a></li>
+    <li><a href="/et/portfoolio/" >Portfoolio</a></li>
+    <li><a href="/et/hinnakiri/" >Teenused</a></li>
+    <li><a href="/et/kontakt/" class="active">Kontakt</a></li>
+    <li class="nav-lang">
+      <a class="lang-btn active" href="/et/kontakt/">ET</a>
+      <span class="lang-sep">/</span>
+      <a class="lang-btn" href="/contact/">EN</a>
+    </li>
+  </ul>
+</header>
+
+<main>
+<section class="contact-wrap">
+  <div class="contact-info">
+    <h1 class="contact-title">Räägi oma projektist.</h1>
+    <p class="contact-body">Kirjelda lühidalt vajadusi ja vastan saadavuse, küsimuste ning selge plaaniga. Anna teada kuupäev, asukoht, ürituse või toote tüüp ning umbkaudne tundide arv. Vastan tavaliselt 1–2 tööpäeva jooksul.</p>
+
+    <div class="contact-detail">
+      <div class="contact-detail-label">E-post</div>
+      <div class="contact-detail-val"><a href="mailto:nima@raavi.ee">nima@raavi.ee</a></div>
+    </div>
+    
+    <div class="contact-detail">
+      <div class="contact-detail-label">Tegevuskoht</div>
+      <div class="contact-detail-val">Tartu, Eesti</div>
+    </div>
+    <div class="contact-detail">
+      <div class="contact-detail-label">Sotsiaalmeedia</div>
+      <div class="contact-detail-val"><a href="https://www.instagram.com/nima.sarabi/" target="_blank" rel="noopener">@nima.sarabi</a></div>
+    </div>
+  </div>
+
+  <form class="inquiry-form" name="inquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/et/kontakt/?ok=1#thanks">
+    <input type="hidden" name="form-name" value="inquiry">
+    <p class="form-honey"><label>Don't fill this out: <input name="bot-field"></label></p>
+    
+    
+
+    <div class="form-row">
+      <div class="form-group"><label for="name">Nimi</label><input id="name" name="name" type="text" required></div>
+      <div class="form-group"><label for="email">E-post</label><input id="email" name="email" type="email" required></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label for="phone">Telefon</label><input id="phone" name="phone" type="tel"></div>
+      <div class="form-group">
+        <label for="type">Projekti tüüp</label>
+        <select id="type" name="project_type">
+          <option value="">Vali…</option>
+          <option>Toit ja toode</option>
+          <option>Üritus</option>
+          <option>Muu</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label for="date">Sobiv kuupäev</label><input id="date" name="preferred_date" type="date"></div>
+      <div class="form-group">
+        <label for="budget">Eelarve (€)</label>
+        <select id="budget" name="budget">
+          <option value="">Vali…</option>
+          <option>Kuni 300 €</option>
+          <option>300 – 600 €</option>
+          <option>600 – 1500 €</option>
+          <option>Lahtine / arutame</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="message">Sõnum</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+    </div>
+    <button class="btn-primary form-submit" type="submit">Saada päring</button>
+
+    <div id="thanks" class="success-msg" style="margin-top:32px; display:none">Aitäh — päring on kohale jõudnud. Vastan tavaliselt 1–2 tööpäeva jooksul.</div>
+  </form>
+</section>
+
+<script>
+if (location.search.indexOf('ok=1') !== -1) {
+  var msg = document.getElementById('thanks');
+  if (msg) { msg.style.display = 'block'; document.querySelector('.inquiry-form').reset(); msg.scrollIntoView({behavior:'smooth', block:'center'}); }
+}
+</script>
+
+
+</main>
+<footer class="footer" role="contentinfo">
+  <div class="footer-logo">Nima <span>Sarabi</span></div>
+  <div class="footer-copy">© 2026 Raavi OÜ. Kõik õigused kaitstud.</div>
+  <div class="footer-links">
+    <a href="/et/portfoolio/">Portfoolio</a>
+    <a href="/et/kontakt/">Kontakt</a>
+    <a href="https://www.instagram.com/nima.sarabi/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@nima.sarabi" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://www.facebook.com/nima.sarabi" target="_blank" rel="noopener">Facebook</a>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js?v=1777476923350" defer></script>
+</body>
+</html>

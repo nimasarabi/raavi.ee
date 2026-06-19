@@ -1,0 +1,126 @@
+<!doctype html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Nima Sarabi</title>
+<meta name="description" content="Start a project — get a tailored quote within two working days.">
+<link rel="canonical" href="https://www.raavi.ee/contact/">
+<link rel="alternate" hreflang="en" href="https://www.raavi.ee/contact/">
+<link rel="alternate" hreflang="et" href="https://www.raavi.ee/et/kontakt/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css?v=1777476921472">
+<meta property="og:title" content="Contact — Nima Sarabi">
+<meta property="og:description" content="Start a project — get a tailored quote within two working days.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.raavi.ee/contact/">
+<meta property="og:locale" content="en_US">
+</head>
+<body class="">
+<header class="nav" role="banner">
+  <a href="/" class="nav-logo">Nima <span>Sarabi</span></a>
+  <button class="nav-burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <ul class="nav-links" role="navigation">
+    <li><a href="/" >Home</a></li>
+    <li><a href="/portfolio/" >Portfolio</a></li>
+    <li><a href="/prices/" >Services</a></li>
+    <li><a href="/contact/" class="active">Contact</a></li>
+    <li class="nav-lang">
+      <a class="lang-btn active" href="/contact/">EN</a>
+      <span class="lang-sep">/</span>
+      <a class="lang-btn" href="/et/kontakt/">ET</a>
+    </li>
+  </ul>
+</header>
+
+<main>
+<section class="contact-wrap">
+  <div class="contact-info">
+    <h1 class="contact-title">Tell me about your project.</h1>
+    <p class="contact-body">Share a few details and I&#39;ll reply with availability, questions and a clear plan. Tell me the date, location, type of event or product, and roughly how many hours you need. I usually reply within 1–2 business days.</p>
+
+    <div class="contact-detail">
+      <div class="contact-detail-label">Email</div>
+      <div class="contact-detail-val"><a href="mailto:nima@raavi.ee">nima@raavi.ee</a></div>
+    </div>
+    
+    <div class="contact-detail">
+      <div class="contact-detail-label">Based in</div>
+      <div class="contact-detail-val">Tartu, Estonia</div>
+    </div>
+    <div class="contact-detail">
+      <div class="contact-detail-label">Social</div>
+      <div class="contact-detail-val"><a href="https://www.instagram.com/nima.sarabi/" target="_blank" rel="noopener">@nima.sarabi</a></div>
+    </div>
+  </div>
+
+  <form class="inquiry-form" name="inquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/contact/?ok=1#thanks">
+    <input type="hidden" name="form-name" value="inquiry">
+    <p class="form-honey"><label>Don't fill this out: <input name="bot-field"></label></p>
+    
+    
+
+    <div class="form-row">
+      <div class="form-group"><label for="name">Name</label><input id="name" name="name" type="text" required></div>
+      <div class="form-group"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label for="phone">Phone</label><input id="phone" name="phone" type="tel"></div>
+      <div class="form-group">
+        <label for="type">Project type</label>
+        <select id="type" name="project_type">
+          <option value="">Select…</option>
+          <option>Food &amp; Product</option>
+          <option>Event</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label for="date">Preferred date</label><input id="date" name="preferred_date" type="date"></div>
+      <div class="form-group">
+        <label for="budget">Budget (€)</label>
+        <select id="budget" name="budget">
+          <option value="">Select…</option>
+          <option>Up to €300</option>
+          <option>€300 – €600</option>
+          <option>€600 – €1,500</option>
+          <option>Open / discuss</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+    </div>
+    <button class="btn-primary form-submit" type="submit">Send inquiry</button>
+
+    <div id="thanks" class="success-msg" style="margin-top:32px; display:none">Thanks — your inquiry is in. I usually reply within 1–2 business days.</div>
+  </form>
+</section>
+
+<script>
+if (location.search.indexOf('ok=1') !== -1) {
+  var msg = document.getElementById('thanks');
+  if (msg) { msg.style.display = 'block'; document.querySelector('.inquiry-form').reset(); msg.scrollIntoView({behavior:'smooth', block:'center'}); }
+}
+</script>
+
+
+</main>
+<footer class="footer" role="contentinfo">
+  <div class="footer-logo">Nima <span>Sarabi</span></div>
+  <div class="footer-copy">© 2026 Raavi OÜ. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="/portfolio/">Portfolio</a>
+    <a href="/contact/">Contact</a>
+    <a href="https://www.instagram.com/nima.sarabi/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@nima.sarabi" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://www.facebook.com/nima.sarabi" target="_blank" rel="noopener">Facebook</a>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js?v=1777476921472" defer></script>
+</body>
+</html>

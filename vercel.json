@@ -1,0 +1,25 @@
+{
+  "redirects": [
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/home/", "destination": "/", "permanent": true },
+    { "source": "/about", "destination": "/", "permanent": true },
+    { "source": "/about/", "destination": "/", "permanent": true },
+    { "source": "/bookings", "destination": "/contact/", "permanent": true },
+    { "source": "/bookings/", "destination": "/contact/", "permanent": true },
+    { "source": "/cart", "destination": "/contact/", "permanent": true },
+    { "source": "/cart/", "destination": "/contact/", "permanent": true },
+    { "source": "/faqs", "destination": "/services/", "permanent": true },
+    { "source": "/faqs/", "destination": "/services/", "permanent": true },
+    { "source": "/et/about", "destination": "/et/", "permanent": true },
+    { "source": "/et/about/", "destination": "/et/", "permanent": true },
+    { "source": "/et/bookings", "destination": "/et/contact/", "permanent": true },
+    { "source": "/et/bookings/", "destination": "/et/contact/", "permanent": true },
+    { "source": "/et/cart", "destination": "/et/contact/", "permanent": true },
+    { "source": "/et/cart/", "destination": "/et/contact/", "permanent": true },
+    { "source": "/et/faqs", "destination": "/et/services/", "permanent": true },
+    { "source": "/et/faqs/", "destination": "/et/services/", "permanent": true },
+    { "source": "/et/et", "destination": "/et/", "permanent": true },
+    { "source": "/et/et/", "destination": "/et/", "permanent": true },
+    { "source": "/en/(.*)", "destination": "/$1", "permanent": true }
+  ]
+}
