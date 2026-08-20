@@ -3,6 +3,5 @@ Allow: /
 Disallow: /*?itemId=
 Disallow: /cart/
 Disallow: /et/cart/
-Disallow: /en/
 
 Sitemap: https://www.raavi.ee/sitemap.xml
