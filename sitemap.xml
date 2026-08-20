@@ -90,6 +90,40 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.raavi.ee/services/event-photography/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/events/concert-photography-estonia-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/events/corporate-event-photography-estonia-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/events/cultural-event-documentation-tartu-estonia-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/events/exhibition-photography-estonia-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/events/summer-festival-photography-estonia-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/events/live-concert-photography-estonia-nima-sarabi.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.raavi.ee/services/product-photography/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/eagle-ash-bath-bombs-gift-box-product-photography-tartu.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/golf-hole-in-one-trophy-product-photography-estonia.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/hand-carved-wooden-relief-panel-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/miniature-building-facade-detail-scale-model-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/handcrafted-earrings-wooden-gift-box-product-photography-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/lighthouse-scale-model-in-hand-nima-sarabi.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.raavi.ee/services/food-photography/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/persian-chicken-kebab-saffron-rice-food-photography.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/persian-food-flatlay-restaurant-menu-photography-tartu.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/persian-saffron-rice-stew-food-photography-tartu.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/tahchin-saffron-rice-cake-food-photography-estonia.webp</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.raavi.ee/contact/</loc>
     <lastmod>2026-04-24</lastmod>
     <changefreq>yearly</changefreq>
@@ -182,6 +216,40 @@
     <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.raavi.ee/et/services/event-photography/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/events/concert-photography-estonia-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/events/corporate-event-photography-estonia-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/events/cultural-event-documentation-tartu-estonia-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/events/exhibition-photography-estonia-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/events/summer-festival-photography-estonia-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/events/live-concert-photography-estonia-nima-sarabi.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.raavi.ee/et/services/product-photography/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/eagle-ash-bath-bombs-gift-box-product-photography-tartu.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/golf-hole-in-one-trophy-product-photography-estonia.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/hand-carved-wooden-relief-panel-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/miniature-building-facade-detail-scale-model-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/handcrafted-earrings-wooden-gift-box-product-photography-nima-sarabi.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/lighthouse-scale-model-in-hand-nima-sarabi.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.raavi.ee/et/services/food-photography/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/persian-chicken-kebab-saffron-rice-food-photography.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/persian-food-flatlay-restaurant-menu-photography-tartu.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/persian-saffron-rice-stew-food-photography-tartu.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.raavi.ee/assets/img/portfolio/product/tahchin-saffron-rice-cake-food-photography-estonia.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.raavi.ee/et/contact/</loc>
