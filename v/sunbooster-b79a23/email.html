@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Copy for email — SunLED Sunbooster</title>
+<!-- Helper for Nima: copies a clickable thumbnail that pastes into any mail app. -->
+<meta name="robots" content="noindex,nofollow,noarchive">
+<link rel="icon" href="/assets/img/ui/favicon.ico?v=2" sizes="any">
+<style>
+  :root {
+    --canvas: #f8f6f1;
+    --ink: #1c1a17;
+    --muted: #817a70;
+    --line: rgba(28, 26, 23, 0.12);
+    --accent: #6f513f;
+    --accent-dark: #50392c;
+    --inverse: #fffaf1;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 40px 16px 64px;
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; }
+  h1 { margin: 0 0 6px; font-size: 1.4rem; }
+  .hint { margin: 0 0 24px; color: var(--muted); }
+  .card {
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+  }
+  button {
+    margin-top: 20px;
+    min-height: 48px;
+    padding: 0 24px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--inverse);
+    font: 600 1rem/1 inherit;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  button:hover { background: var(--accent-dark); }
+  .status { margin-left: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Copy for email</h1>
+  <p class="hint">Press the button, then paste into Apple Mail, Gmail, Outlook or any other mail app. The thumbnail and link come with it.</p>
+
+  <div class="card">
+    <div id="snippet"><a href="https://www.raavi.ee/v/sunbooster-b79a23/" style="text-decoration:none;"><img src="https://www.raavi.ee/v/sunbooster-b79a23/thumbnail.jpg" width="600" height="315" alt="Watch the SunLED Sunbooster film" style="display:block;width:100%;max-width:600px;height:auto;border:0;border-radius:8px;"></a><p style="margin:12px 0 0;font-family:Helvetica,Arial,sans-serif;font-size:15px;"><a href="https://www.raavi.ee/v/sunbooster-b79a23/" style="color:#6f513f;">Watch the SunLED Sunbooster film (0:14) — view or download</a></p></div>
+  </div>
+
+  <button type="button" id="copy">Copy for email</button><span class="status" id="status" role="status"></span>
+</div>
+
+<script>
+  (function () {
+    var snippet = document.getElementById('snippet');
+    var status = document.getElementById('status');
+    var url = 'https://www.raavi.ee/v/sunbooster-b79a23/';
+
+    function selectAndCopy() {
+      var range = document.createRange();
+      range.selectNodeContents(snippet);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) {}
+      sel.removeAllRanges();
+      return ok;
+    }
+
+    document.getElementById('copy').addEventListener('click', function () {
+      var done = function () { status.textContent = 'Copied. Now paste it into your email.'; };
+      var fail = function () { status.textContent = 'Copy failed. Select the box above and copy it by hand.'; };
+      if (window.ClipboardItem && navigator.clipboard && navigator.clipboard.write) {
+        navigator.clipboard.write([new ClipboardItem({
+          'text/html': new Blob([snippet.innerHTML], { type: 'text/html' }),
+          'text/plain': new Blob(['Watch the SunLED Sunbooster film: ' + url], { type: 'text/plain' })
+        })]).then(done, function () { selectAndCopy() ? done() : fail(); });
+      } else {
+        selectAndCopy() ? done() : fail();
+      }
+    });
+  })();
+</script>
+</body>
+</html>
